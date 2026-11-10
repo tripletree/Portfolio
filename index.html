@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="en" data-layer="shipped">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>tripletree — AI-native product design, design systems, delivery pipelines</title>
+<meta name="description" content="Senior product manager, 10 years in B2B. I design products, the design systems behind them, and the AI pipelines that ship them. Available for hire and for B2B design engagements.">
+<meta property="og:title" content="tripletree — product judgment, compiled into systems AI can ship">
+<meta property="og:description" content="A portfolio that ships with its own PRD and blueprint. Turn the fidelity dial.">
+<meta name="theme-color" content="#EFECE4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 18'%3E%3Cpath d='M5 2l5 14H0z' fill='%2314130F'/%3E%3Cpath d='M15 2l5 14H10z' fill='%23FF4B14'/%3E%3Cpath d='M25 2l5 14H20z' fill='%2314130F'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700&family=Geist+Mono:wght@400;500;600&family=Instrument+Serif:ital@0;1&family=Noto+Serif+SC:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js')</script>
+</head>
+<body id="top">
+
+<header class="top">
+  <a class="mark" href="#top" aria-label="tripletree — home">
+    <svg viewBox="0 0 30 18" aria-hidden="true"><path d="M5 2l5 14H0z"/><path d="M15 2l5 14H10z"/><path d="M25 2l5 14H20z"/></svg>
+    <span>tripletree</span>
+  </a>
+  <nav>
+    <a href="#method" data-zh="方法">Method</a>
+    <a href="#work" data-zh="项目">Work</a>
+    <a href="#offers" data-zh="服务">Services</a>
+    <a href="#contact" data-zh="联系">Contact</a>
+  </nav>
+  <div class="tools">
+    <button class="pill" id="langBtn" aria-label="Switch language">中文</button>
+    <button class="pill" id="tkBtn" aria-expanded="false"><i class="sw"></i><span data-zh="令牌">Tokens</span></button>
+  </div>
+</header>
+
+<!-- token console: the site is themed by the same contract it sells -->
+<aside class="console" id="console" hidden aria-label="Design token console">
+  <div><h6 data-zh="color.accent 强调色">color.accent</h6><div class="sws" id="swAccent"></div></div>
+  <div><h6 data-zh="theme 主题">theme</h6><div class="opt" id="optTheme"><button data-v="paper" data-zh="纸">Paper</button><button data-v="ink" data-zh="墨">Ink</button></div></div>
+  <div><h6 data-zh="font.display 标题字体">font.display</h6><div class="opt" id="optType"><button data-v="serif" data-zh="衬线">Serif</button><button data-v="sans" data-zh="无衬线">Grotesk</button></div></div>
+  <div><h6><span data-zh="radius 圆角">radius</span> · <span id="radVal">14</span>px</h6><input type="range" id="rad" min="0" max="28" value="14" aria-label="Radius"></div>
+  <pre id="tkJson"></pre>
+  <p data-zh="整个站点只消费这一份令牌契约。改一个值，所有组件一起变——这就是我交付的设计系统的工作方式。">The whole site consumes this one token contract. Change a value and every component follows — which is how the design systems I deliver behave.</p>
+</aside>
+
+<main>
+
+<!-- ============ 00 HERO ============ -->
+<section class="hero" id="hero">
+  <canvas id="field" class="deco" aria-hidden="true"></canvas>
+  <div class="ph"><span data-zh="[ 主视觉：从混沌到秩序的点阵 ]">[ hero visual: a dot field moving from noise to order ]</span></div>
+  <div class="wrap" style="width:100%">
+    <div class="hero-meta mono">
+      <span data-zh="作品集 v10 · 产品 / 设计系统 / AI 交付">Portfolio v10 · Product / Design systems / AI delivery</span>
+      <span class="live" data-zh="可全职入职 · 可承接 B2B 设计项目">Open to full-time roles &amp; B2B design engagements</span>
+    </div>
+    <p class="story" style="margin-top:28px" data-zh="作为一位只有 30 秒的招聘负责人或 B2B 买家，我希望一眼看懂此人做什么、凭什么可信，以便决定是否继续往下看。">As a hiring manager or B2B buyer with 30 seconds, I want to understand what this person does and why it is credible, so I can decide whether to keep scrolling.</p>
+    <h1 data-tk="type.display / tracking −3.5%" data-zh="十年产品判断，<em>编译</em>成 AI 能交付的系统。">Ten years of product judgment, <em>compiled</em> into systems AI can ship.</h1>
+  </div>
+  <div class="wrap" style="width:100%">
+    <div class="hero-foot">
+      <div>
+        <p class="lead" data-zh="我是一名做了十年 B2B 的产品经理。我设计产品，也设计产品背后的设计系统，以及让 AI 把它们稳定造出来的交付流水线。这个网站本身就是其中一件作品。">I’m a product manager with ten years in B2B. I design the product, the design system underneath it, and the pipeline that lets AI build it reliably. This site is one of the case studies.</p>
+        <div class="hero-cta">
+          <a class="btn primary" href="#contact" data-tk="button.primary / radius.pill"><span data-zh="发起一个项目">Start a project</span><span class="arr">→</span></a>
+          <a class="btn ghost" href="#work"><span data-zh="看项目">See the work</span><span class="arr">↓</span></a>
+        </div>
+      </div>
+      <div class="stats" data-tk="grid 4 col / space.4">
+        <div class="stat"><b>10</b><span data-zh="年 B2B 产品经验">years shipping B2B product</span></div>
+        <div class="stat"><b>60+</b><span data-zh="个组件规范，Moxian 设计系统">component specs in the Moxian design system</span></div>
+        <div class="stat"><b>141</b><span data-zh="个 E2E 用例，守住一个 AI 构建的应用">E2E specs guarding an AI-built app</span></div>
+        <div class="stat"><b>41</b><span data-zh="个 Vue 基础组件，随设计系统一起发包">Vue primitives shipped as a package</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 01 METHOD ============ -->
+<section id="method">
+  <div class="wrap">
+    <div class="eyebrow mono"><b>01</b><span data-zh="方法">Method</span></div>
+    <p class="story" data-zh="作为访客，我希望理解底部那个「保真度」旋钮在做什么，以便把它和此人的工作方式对应起来。">As a visitor, I want to understand what the fidelity dial at the bottom does, so I can map it to how this person actually works.</p>
+    <div class="method-head">
+      <h2 class="rv" data-zh="每个产品我都交付三次：<em>意图</em>、<em>系统</em>、<em>成品</em>。">I ship every product three times: as <em>intent</em>, as <em>system</em>, as <em>product</em>.</h2>
+      <p class="lead rv" data-zh="当 AI 负责写代码，稀缺的不再是像素，而是清晰的意图和可被机器读懂的规则。所以这个网站有三层。点下面任意一张卡片，或按键盘 1 · 2 · 3，整个站点会切到对应那一层。">When AI writes the code, pixels stop being scarce. Clear intent and machine-readable rules become the work. So this site has three layers. Pick a card, or press 1 · 2 · 3, and the whole site re-renders as that layer.</p>
+    </div>
+    <div class="layers">
+      <button class="layer card rv" data-go="intent" data-tk="card / radius.lg / space.7">
+        <span class="n">1</span>
+        <h3 data-zh="意图">Intent</h3>
+        <p data-zh="PRD 层。每个区块露出它的用户故事：为谁、解决什么、如何算成功。Agent 从这里开始读。">The PRD layer. Every section shows its user story: who it is for, what it solves, how success is judged. This is where agents start reading.</p>
+        <ul><li class="tag" data-zh="定位">Positioning</li><li class="tag">OKR</li><li class="tag" data-zh="定价">Pricing</li><li class="tag" data-zh="验收标准">Acceptance criteria</li></ul>
+        <span class="go" data-zh="把网站切成 PRD →">Render the site as its PRD →</span>
+      </button>
+      <button class="layer card rv" style="--d:.08s" data-go="system">
+        <span class="n">2</span>
+        <h3 data-zh="系统">System</h3>
+        <p data-zh="蓝图层。网格、令牌名、组件边界全部显形。同一份契约同时服务 Figma、代码和 Agent。">The blueprint layer. Grid, token names and component boundaries become visible. One contract serves Figma, code and agents alike.</p>
+        <ul><li class="tag">Figma variables</li><li class="tag">DESIGN.md</li><li class="tag">SKILL.md</li><li class="tag">CSS tokens</li></ul>
+        <span class="go" data-zh="把网站切成蓝图 →">Render the site as its blueprint →</span>
+      </button>
+      <button class="layer card rv" style="--d:.16s" data-go="shipped">
+        <span class="n">3</span>
+        <h3 data-zh="成品">Shipped</h3>
+        <p data-zh="产品层。经过 lint、类型、E2E、截图证据和性能预算之后，真正到用户手里的东西。">The product layer. What reaches users after lint, types, E2E, screenshot evidence and performance budgets have all passed.</p>
+        <ul><li class="tag">Playwright</li><li class="tag" data-zh="前后对比截图">Before/after evidence</li><li class="tag">Lighthouse CI</li></ul>
+        <span class="go" data-zh="回到成品 →">Back to the product →</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 WORK ============ -->
+<div id="work"></div>
+
+<!-- ---- A. Sciforum ---- -->
+<section id="sciforum">
+  <div class="wrap">
+    <div class="eyebrow mono"><b>02</b><span data-zh="项目 A · 产品设计">Work A · Product design</span></div>
+    <p class="story" data-zh="作为产品负责人岗位的面试官，我希望看到此人如何把一个老平台的重建落到定位、定价、干系人和 OKR 上，而不是只看界面截图。">As someone hiring a product lead, I want to see how this person turns a platform rebuild into positioning, pricing, stakeholder alignment and OKRs, not just screenshots.</p>
+    <div class="case">
+      <div class="case-meta">
+        <div class="case-no">A</div>
+        <h2>Sciforum</h2>
+        <p data-zh="MDPI 旗下的学术会议管理平台。我作为产品经理主导新平台重建与重新上线：从愿景、定价到上线切换。">MDPI’s platform for running academic conferences. As product manager I led the rebuild and relaunch, from vision and pricing through to cutover.</p>
+        <dl class="facts">
+          <div><dt data-zh="角色">Role</dt><dd data-zh="产品经理 · 重建与重新上线">Product manager · rebuild &amp; relaunch</dd></div>
+          <div><dt data-zh="范围">Scope</dt><dd data-zh="建站、投稿、注册、日程、通知、数据托管 六大模块">Six modules: website builder, submissions, registration, programme, communications, data hosting</dd></div>
+          <div><dt data-zh="产出">Artifacts</dt><dd data-zh="愿景、OKR、竞品与市场研究、定价策略、GTM、干系人地图">Vision, OKRs, market and competitor research, pricing strategy, GTM plan, stakeholder map</dd></div>
+        </dl>
+        <a class="link" href="https://sciforum.net/" target="_blank" rel="noopener">sciforum.net ↗</a>
+      </div>
+      <div class="case-body">
+        <p class="pull rv" data-zh="会议结束了，数据不该跟着消失。我们把<em>永久托管</em>做成定位的核心，价格只是第二句话。">A conference ends. Its record shouldn’t. We made <em>permanent hosting</em> the position, and let price be the second sentence.</p>
+
+        <div class="widget card rv" data-tk="widget / tabs / card">
+          <div class="w-bar">
+            <span class="w-title" data-zh="可交互 · 我的产品决策材料">Interactive · the decision material</span>
+            <div class="seg" role="tablist" id="sciTabs">
+              <button role="tab" aria-selected="true" data-p="price" data-zh="定价">Pricing</button>
+              <button role="tab" aria-selected="false" data-p="stake" data-zh="干系人">Stakeholders</button>
+              <button role="tab" aria-selected="false" data-p="okr">OKR</button>
+            </div>
+          </div>
+          <div class="w-body" data-panel="price">
+            <div class="price-ctl">
+              <span data-zh="会议规模（投稿数）">Conference size (submissions)</span>
+              <output id="subOut">120</output>
+            </div>
+            <input type="range" id="subs" min="50" max="300" step="10" value="120" aria-label="Submissions">
+            <div class="bars" id="bars"></div>
+            <div class="save"><b id="saveN">−72%</b><p id="saveT"></p></div>
+            <p class="fine" data-zh="数字为研究阶段的参考入门价（CHF），来自公开价目表；竞品为估算。EasyChair 在小规模更便宜——所以定位从不只讲价格。">Indicative entry prices in CHF from public price lists at research time; competitor figures are estimates. EasyChair is cheaper at small sizes, which is exactly why the positioning never leads with price alone.</p>
+          </div>
+          <div class="w-body" data-panel="stake" hidden>
+            <div class="smap-wrap">
+              <div class="smap" id="smap">
+                <span class="q" data-zh="重点管理">Manage closely</span><span class="q" data-zh="保持满意">Keep satisfied</span>
+                <span class="q" data-zh="保持知情">Keep informed</span><span class="q" data-zh="观察">Monitor</span>
+                <span class="ax x" data-zh="关注度 →">Interest →</span><span class="ax y" data-zh="↑ 影响力">↑ Power</span>
+              </div>
+              <div class="smap-info" id="smapInfo"></div>
+            </div>
+            <div class="legend">
+              <span><i style="background:#18B26B"></i><span data-zh="支持">Supportive</span></span>
+              <span><i style="background:var(--accent)"></i><span data-zh="谨慎 / 关注风险">Cautious / risk-focused</span></span>
+              <span><i style="background:var(--muted)"></i><span data-zh="中立">Neutral</span></span>
+            </div>
+          </div>
+          <div class="w-body" data-panel="okr" hidden>
+            <div class="okr">
+              <div><b>O1</b><h5 data-zh="成功上线新平台 MVP">Launch the MVP of the new platform</h5><ul><li data-zh="核心功能 100% 完成">100% of core features delivered</li><li data-zh="历史数据迁移并签收完整性">Legacy data migrated, integrity signed off</li><li data-zh="P0 / P1 缺陷与 UAT 阻断项清零">P0/P1 bugs and UAT showstoppers closed</li></ul></div>
+              <div><b>O2</b><h5 data-zh="监测 MVP 表现，建立产品指标">Measure the MVP and set baselines</h5><ul><li data-zh="结构化收集内外部反馈">Structured feedback from internal and external users</li><li data-zh="定义使用指标与基线">Usage metrics and benchmarks defined</li></ul></div>
+              <div><b>O3</b><h5 data-zh="以集客营销搭建商业增长基础">Build an inbound foundation for revenue</h5><ul><li data-zh="上线「预约演示」，产生 10 个 MQL">“Request a demo” live, 10 MQLs</li><li data-zh="签下 10 个外部付费会议合同">10 external paid conference contracts</li></ul></div>
+              <div><b>O4</b><h5 data-zh="持续升级能力，强化产品价值">Keep raising product value</h5><ul><li data-zh="通知中心与日程编排器">Communication hub and programme builder</li><li data-zh="全球支付，含支付宝与微信支付">Global payments incl. Alipay and WeChat Pay</li></ul></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="two">
+          <div class="note card rv"><h4 data-zh="我做的判断">The call I made</h4><p data-zh="三家竞品都按年收托管费或按量收费。把「内容永久免费可访问」写进产品承诺，让学术组织者最在意的长期可引用性成为我们独有的一句话。">All three competitors charge for hosting over time or per item. Writing “content stays accessible, permanently, at no extra cost” into the product promise gave organisers the one thing they care about most: a citable record.</p></div>
+          <div class="note card rv" style="--d:.08s"><h4 data-zh="上线怎么管">How the cutover was run</h4><p data-zh="上线不是一次发布，而是一次组织协调：按影响力与关注度给 12 类干系人分区，为每一类准备不同的信息和时间点，再走 10 分钟的管理层汇报。">A cutover is an alignment problem before it is a release. Twelve stakeholder groups were mapped by power and interest, each with its own message and timing, then taken through a ten-minute leadership briefing.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---- B. Moxian ---- -->
+<section id="moxian" class="mx">
+  <div class="wrap">
+    <div class="eyebrow mono"><b>02</b><span data-zh="项目 B · 设计系统">Work B · Design system</span></div>
+    <p class="story" data-zh="作为设计或前端负责人，我希望看到此人能否在成熟组件库之上，为一个多角色的复杂 B2B 产品建立可复用、可交接的设计系统。">As a design or front-end lead, I want to see whether this person can build a reusable, hand-off-ready design system on top of an existing library for a complex multi-role B2B product.</p>
+    <div class="case">
+      <div class="case-meta">
+        <div class="case-no">B</div>
+        <h2>Moxian</h2>
+        <p data-zh="一套从线索到回款、从项目到工时的企业经营系统。我基于 Semi Design 在 Figma 里为它搭建了完整的设计系统，并用它画完全部业务页面。">A business operating system that runs from lead to cash and from project to timesheet. I built its design system in Figma on top of Semi Design, then designed every business page with it.</p>
+        <dl class="facts">
+          <div><dt data-zh="角色">Role</dt><dd data-zh="产品设计 · 设计系统负责人">Product design · design system owner</dd></div>
+          <div><dt data-zh="基础">Base</dt><dd>Semi Design → Moxian tokens &amp; components</dd></div>
+          <div><dt data-zh="覆盖">Coverage</dt><dd data-zh="运营仪表盘、首页、线索、客户、商机、项目集、项目、任务、问题、工时、风险、变更、成本中心、协同中心">Ops dashboard, home, leads, customers, opportunities, programmes, projects, tasks, issues, timesheets, risks, changes, cost centre, collaboration</dd></div>
+        </dl>
+        <a class="link" href="https://www.figma.com/design/uvf10ty6NsWdcNfIKgYius/Moxian?node-id=0-1" target="_blank" rel="noopener"><span data-zh="打开 Figma 文件">Open the Figma file</span> ↗</a>
+      </div>
+      <div class="case-body">
+        <p class="pull rv" data-zh="同一套组件，三种角色，三个首页。设计系统的价值，在于<em>换一个人登录</em>时不需要重画。">One component set, three roles, three home pages. A design system earns its keep when a <em>different person logs in</em> and nothing has to be redrawn.</p>
+
+        <div class="widget card rv" data-tk="Nav + MetricCard + List (Semi)">
+          <div class="w-bar">
+            <span class="w-title" data-zh="可交互 · 按角色切换首页（HTML 重绘）">Interactive · role-based home, redrawn in HTML</span>
+            <div class="seg" role="tablist" id="mxRoles">
+              <button role="tab" aria-selected="true" data-r="sales" data-zh="销售">Sales</button>
+              <button role="tab" aria-selected="false" data-r="pm" data-zh="项目经理">PM</button>
+              <button role="tab" aria-selected="false" data-r="eng" data-zh="工程师">Engineer</button>
+            </div>
+          </div>
+          <div class="w-body">
+            <div class="chain" id="mxChain"></div>
+            <div class="mx-app">
+              <div class="mx-nav" id="mxNav"></div>
+              <div class="mx-main" id="mxMain"></div>
+            </div>
+            <p class="fine" data-zh="示意数据。布局与组件命名对应 Figma 中的 Nav、home-metric-card、home-card 等组件。">Sample data. Layout and component names follow the Figma components: Nav, home-metric-card, home-card.</p>
+          </div>
+        </div>
+
+        <div class="inv rv">
+          <div><b>15</b><span data-zh="个 Figma 页面">Figma pages</span></div>
+          <div><b>60+</b><span data-zh="个组件规范画板">component spec frames</span></div>
+          <div><b>12</b><span data-zh="个业务模块">business modules</span></div>
+          <div><b>3</b><span data-zh="种角色首页">role-based homes</span></div>
+          <div><b>1</b><span data-zh="套令牌契约">token contract</span></div>
+        </div>
+
+        <div class="two">
+          <div class="note card rv"><h4 data-zh="为什么站在 Semi 上">Why build on Semi</h4><p data-zh="B2B 团队最贵的是工程时间。沿用 Semi 的组件 API 与命名，设计稿里的每个图层都能在代码里找到同名组件，交接成本接近零。">In B2B the expensive resource is engineering time. Keeping Semi’s component API and naming means every layer in the file has a same-named component in code, so hand-off costs close to nothing.</p></div>
+          <div class="note card rv" style="--d:.08s"><h4 data-zh="系统化的对象链">An object chain, not a page list</h4><p data-zh="线索 → 客户 → 商机 → 项目 → 任务 → 工时 → 成本。先把业务对象和它们的关系定下来，页面只是这条链在不同角色眼中的切面。">Lead → customer → opportunity → project → task → timesheet → cost. Fix the business objects and their relations first; pages are just views of that chain for each role.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---- C. WTO ---- -->
+<section id="wto" class="ink">
+  <div class="wrap">
+    <div class="eyebrow mono"><b>02</b><span data-zh="项目 C · AI 开发流水线">Work C · AI delivery pipeline</span></div>
+    <p class="story" data-zh="作为工程负责人或创始人，我希望确认「AI 写代码」在此人手里是一条有门禁、有证据的流水线，而不是一次次碰运气的对话。">As an engineering lead or founder, I want proof that “AI writes the code” means a gated, evidenced pipeline in this person’s hands, not a series of lucky prompts.</p>
+    <div class="case">
+      <div class="case-meta">
+        <div class="case-no">C</div>
+        <h2 data-zh="WTO · 卡车停车运营">WTO · Truck parking ops</h2>
+        <p data-zh="Cereb 为美国卡车停车运营商做的 Web 应用：机会地图、AI 摄像头、车辆记录、司机预订与支付。产品由 AI 开发流水线构建，每一张工单都走同一条路。">Cereb’s web app for US truck-parking operators: opportunity map, AI cameras, vehicle records, driver booking and payments. It is built through an AI delivery pipeline, and every ticket travels the same road.</p>
+        <dl class="facts">
+          <div><dt data-zh="角色">Role</dt><dd data-zh="产品设计 · AI 流水线中的「人」">Product design · the human in the AI pipeline</dd></div>
+          <div><dt data-zh="技术栈">Stack</dt><dd>Vue 3 · TypeScript · Element Plus · Vant · deck.gl · Playwright</dd></div>
+          <div><dt data-zh="规模">Scale</dt><dd data-zh="206 个 Vue 文件 · 141 个 E2E 用例 · 管理端 + 司机端 H5">206 Vue files · 141 E2E specs · desktop console + mobile driver portal</dd></div>
+        </dl>
+        <span class="mono muted" data-zh="私有仓库 · 可预约演示">Private repository · walkthrough on request</span>
+      </div>
+      <div class="case-body">
+        <p class="pull rv" data-zh="我不 review 每一行代码。我设计<em>代码必须通过的那几道门</em>，然后只看证据。">I don’t review every line. I design <em>the gates the code has to pass</em>, then I read the evidence.</p>
+
+        <div class="widget card rv" data-tk="pipeline / stage rail + terminal">
+          <div class="w-bar">
+            <span class="w-title" data-zh="可交互 · 一张工单的一生">Interactive · the life of one ticket</span>
+            <button class="pill" id="runBtn"><span data-zh="▶ 重新运行">▶ Run again</span></button>
+          </div>
+          <div class="pipe">
+            <ol class="rail" id="rail"></ol>
+            <div class="term" id="term" aria-live="off"></div>
+          </div>
+        </div>
+
+        <div class="gates rv">
+          <div><b>README for agents</b><span data-zh="仓库首页写给 Agent 看：职责边界、症状速查、启动与最小验证。">The repo front page is written for agents: ownership boundaries, symptom lookup, start-up and minimum verification.</span></div>
+          <div><b>worktree / ticket</b><span data-zh="每张工单一个独立工作区，多个 Agent 并行而互不污染。">One isolated worktree per ticket, so several agents work in parallel without stepping on each other.</span></div>
+          <div><b>behaviour-named E2E</b><span data-zh="用例按行为命名，工单号只留在追溯表里，测试读起来就是需求。">Specs are named after behaviour; ticket IDs live only in a traceability table, so tests read as requirements.</span></div>
+          <div><b>evidence, not claims</b><span data-zh="PR 附 375 / 390 / 1280 三档视口的前后截图和原始测量 JSON。">Each PR carries before/after screenshots at 375, 390 and 1280 px plus the raw measurement JSON.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ---- D. Zhixu ---- -->
+<section id="zhixu">
+  <div class="wrap">
+    <div class="eyebrow mono"><b>02</b><span data-zh="项目 D · 设计系统 + 落地页">Work D · Design system + landing page</span></div>
+    <p class="story" data-zh="作为想采购设计系统的创始人，我希望看到一套从品牌、令牌到可安装代码包、并且 AI Agent 也能直接使用的完整交付物。">As a founder shopping for a design system, I want to see a complete deliverable: brand, tokens, an installable code package, and something AI agents can use directly.</p>
+    <div class="case">
+      <div class="case-meta">
+        <div class="case-no">D</div>
+        <h2 data-zh="知序 FabricMind">Zhixu FabricMind</h2>
+        <p data-zh="面向纺织产品开发的 DATA + BI + AI 决策系统。我从零做了它的品牌设计系统和营销落地页，并把系统打包成 Agent 可读的技能。">A DATA + BI + AI decision system for textile product development. I created its brand design system and marketing landing page from scratch, and packaged the system as a skill agents can read.</p>
+        <dl class="facts">
+          <div><dt data-zh="角色">Role</dt><dd data-zh="品牌、设计系统、落地页，一人完成">Brand, design system and landing page, end to end</dd></div>
+          <div><dt data-zh="交付">Delivered</dt><dd>CSS tokens · DESIGN.md · SKILL.md · AGENTS.md · Vue 3 package</dd></div>
+          <div><dt data-zh="技术栈">Stack</dt><dd>Vue 3.5 · TypeScript · Vite · Tailwind CSS 4</dd></div>
+        </dl>
+        <a class="link" href="https://github.com/tripletree/ZhixuDS" target="_blank" rel="noopener">GitHub · ZhixuDS ↗</a>
+      </div>
+      <div class="case-body">
+        <p class="pull rv" data-zh="一套设计系统现在有三类读者：设计师、工程师，还有<em>Agent</em>。我为三者各写了一份入口。">A design system now has three readers: designers, engineers and <em>agents</em>. I wrote a front door for each.</p>
+
+        <div class="zx rv" id="zx" data-tk="theme: dark ⇄ html.light">
+          <div class="zx-top">
+            <b>知序<i>FabricMind</i></b>
+            <button class="zx-toggle" id="zxToggle"><span data-zh="切换明暗主题">Toggle theme</span></button>
+          </div>
+          <div class="zx-hero">
+            <div>
+              <span class="zx-eyebrow">Fashion Intelligence · 时尚智能</span>
+              <h4>让趋势有序，<br>让开发有据</h4>
+              <p data-zh="让时尚判断成为可验证的 AI 决策。">Order to trends, evidence to development: fashion judgment as a verifiable AI decision.</p>
+              <div class="zx-btns"><span>预约演示</span><span>了解产品</span></div>
+            </div>
+            <div class="zx-panel">
+              <small>机会指数 · Opportunity index</small>
+              <div class="zx-score"><b>78</b><span>/100</span><u>+18%</u></div>
+              <div class="zx-spark"><i style="height:30%"></i><i style="height:42%"></i><i style="height:38%"></i><i style="height:55%"></i><i style="height:50%"></i><i style="height:66%"></i><i style="height:61%"></i><i style="height:78%"></i><i style="height:72%"></i><i style="height:92%"></i></div>
+              <div class="zx-tags"><span>Lyocell</span><span>Recycled Nylon</span><span>TOP 5</span></div>
+            </div>
+          </div>
+          <div class="zx-tokens">
+            <div><i style="background:var(--z-bg,var(--bg))"></i>ink-950</div>
+            <div><i style="background:var(--z-card,var(--card))"></i>ink-800</div>
+            <div><i style="background:var(--z-fg,var(--fg))"></i>bone</div>
+            <div><i style="background:var(--z-ac,var(--fg))"></i>azure</div>
+            <div><i style="background:var(--z-gold,var(--muted))"></i>champagne</div>
+            <div><i style="background:var(--z-rouge,var(--muted))"></i>rouge</div>
+          </div>
+        </div>
+
+        <div class="two">
+          <div class="card tree rv">ZhixuDS/<br>
+├─ <b>readme.md</b> <span data-zh="← 给人：品牌、语气、视觉基础">← for people: brand, voice, visual foundations</span><br>
+├─ <b>DESIGN.md</b> <span data-zh="← 给工具：开放格式的令牌与组件">← for tools: tokens &amp; components in an open format</span><br>
+├─ <b>SKILL.md</b> <span data-zh="← 给 Agent：可调用的设计技能">← for agents: an invocable design skill</span><br>
+├─ <b>AGENTS.md</b> <span data-zh="← 给 Agent：动手前先读什么">← for agents: what to read before touching anything</span><br>
+├─ tokens/ <span>colors · typography · effects</span><br>
+└─ templates/vue-package/ <span data-zh="← 41 个基础组件 + 落地页">← 41 primitives + landing page</span></div>
+          <div class="note card rv" style="--d:.08s"><h4 data-zh="结果">What this buys you</h4><p data-zh="让 Agent 画一张新页面时，它不需要猜：颜色、字号、文案语气、组件配方都写在它会读的文件里。品牌一致性从「靠人盯」变成「默认如此」。">Ask an agent for a new page and it doesn’t guess. Colour, type, copy voice and component recipes all sit in files it reads first. Brand consistency stops depending on someone watching and becomes the default.</p><p style="margin-top:12px" data-zh="规则例子：每个主题只允许一个工作强调色；永不使用 emoji；数字即美学。">Sample rules: one working accent per theme; no emoji, ever; numbers are the aesthetic.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 OFFERS ============ -->
+<section id="offers">
+  <div class="wrap">
+    <div class="eyebrow mono"><b>03</b><span data-zh="服务">Services</span></div>
+    <p class="story" data-zh="作为 B2B 买家，我希望清楚知道可以买到什么、交付物是什么、有什么先例，以便在内部发起采购。">As a B2B buyer, I want to know exactly what I can buy, what the deliverables are and what precedent exists, so I can start the conversation internally.</p>
+    <div class="method-head">
+      <h2 class="rv" data-zh="三种可以直接<em>采购</em>的工作。">Three pieces of work you can <em>buy</em>.</h2>
+      <p class="lead rv" data-zh="每一项都对应上面一个真实项目，范围在 30 分钟通话里确定，交付物是文件而不是幻灯片。">Each one maps to a real project above. Scope is settled in a 30-minute call, and the deliverables are files rather than slides.</p>
+    </div>
+    <div class="offers">
+      <article class="offer card rv" data-tk="card.offer / space.7">
+        <span class="k" data-zh="01 · 产品设计">01 · Product design</span>
+        <h3 data-zh="B2B 产品设计冲刺">B2B product design sprint</h3>
+        <p data-zh="为新产品或老平台重建，把模糊的方向变成团队和 Agent 都能执行的定义。">For a new product or a platform rebuild: turn a fuzzy direction into a definition your team and your agents can execute.</p>
+        <ul><li data-zh="定位、ICP 与价值主张">Positioning, ICP and value proposition</li><li data-zh="对象模型与关键流程">Object model and key flows</li><li data-zh="定价与上线方案">Pricing and launch plan</li><li data-zh="带验收标准的高保真原型">High-fidelity prototype with acceptance criteria</li></ul>
+        <span class="proof" data-zh="先例：Sciforum">Precedent: Sciforum</span>
+      </article>
+      <article class="offer card rv" style="--d:.08s">
+        <span class="k" data-zh="02 · 设计系统">02 · Design system</span>
+        <h3 data-zh="设计系统，交付即可用">Design system, delivered ready to use</h3>
+        <p data-zh="基于你现有的组件库或从零开始，Figma 与代码共用一份令牌，并附带给 Agent 的入口文件。">On top of your existing library or from zero. Figma and code share one set of tokens, with entry files written for agents.</p>
+        <ul><li data-zh="Figma 变量与组件库">Figma variables and component library</li><li data-zh="CSS 令牌与明暗主题">CSS tokens with light and dark themes</li><li>DESIGN.md · SKILL.md · AGENTS.md</li><li data-zh="组件代码包与落地页">Component package and landing page</li></ul>
+        <span class="proof" data-zh="先例：Moxian · 知序">Precedent: Moxian · Zhixu</span>
+      </article>
+      <article class="offer card rv" style="--d:.16s">
+        <span class="k" data-zh="03 · AI 流水线">03 · AI pipeline</span>
+        <h3 data-zh="AI 开发工作流技能包">AI delivery workflow skill pack</h3>
+        <p data-zh="把你的仓库改造成 Agent 能稳定产出的环境：规则、门禁和证据一次装好。">Make your repository a place where agents produce reliable work: rules, gates and evidence installed in one pass.</p>
+        <ul><li data-zh="写给 Agent 的 README 与技能">Agent-facing README and skills</li><li data-zh="工单模板与验收标准写法">Ticket template and acceptance-criteria style</li><li data-zh="lint / 类型 / E2E / 预算门禁">Lint, type, E2E and budget gates</li><li data-zh="截图证据与追溯规范">Screenshot evidence and traceability rules</li></ul>
+        <span class="proof" data-zh="先例：Cereb · WTO">Precedent: Cereb · WTO</span>
+      </article>
+    </div>
+    <div class="hire card rv">
+      <div><h3 data-zh="或者，直接雇我。">Or simply hire me.</h3><p data-zh="我在找产品负责人、AI 产品设计或设计系统方向的全职岗位，可远程，可与欧美时区协作。">I’m open to full-time roles in product leadership, AI product design or design systems. Remote is fine, and I work comfortably across European and US time zones.</p></div>
+      <a class="btn primary" href="#contact"><span data-zh="聊一聊">Let’s talk</span><span class="arr">→</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 CONTACT ============ -->
+<section id="contact" class="contact ink">
+  <div class="wrap">
+    <div class="eyebrow mono"><b>04</b><span data-zh="联系">Contact</span></div>
+    <p class="story" data-zh="作为已经感兴趣的访客，我希望在一分钟内说清需求并发出去，而不是面对一个空白邮件。">As a visitor who is already interested, I want to state my need and send it within a minute, rather than face an empty email.</p>
+    <h2 class="rv" data-zh="三次点击，写好一份<em>需求简报</em>。">Write the <em>brief</em> in three clicks.</h2>
+    <div class="brief">
+      <div class="brief-form card rv" data-tk="form / chip.group">
+        <div><label data-zh="我需要">I need</label><div class="chips" id="cNeed"></div></div>
+        <div><label data-zh="时间">Timing</label><div class="chips" id="cTime"></div></div>
+        <div><label for="org" data-zh="公司 / 团队">Company / team</label><input id="org" autocomplete="organization" placeholder="Acme GmbH"></div>
+      </div>
+      <div class="brief-out card rv" style="--d:.08s">
+        <pre id="briefOut"></pre>
+        <div class="row">
+          <a class="btn primary" id="sendBtn" href="#"><span id="sendLbl"></span><span class="arr">→</span></a>
+          <button class="btn ghost" id="copyBtn"><span data-zh="复制简报">Copy brief</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <span>© 2026 tripletree · <span data-zh="本站无框架、无构建：一份 HTML、一份令牌、一个旋钮。">No framework, no build: one HTML file, one token contract, one dial.</span></span>
+  <span><kbd>1</kbd> <kbd>2</kbd> <kbd>3</kbd> <span data-zh="切换保真度">fidelity</span> · <kbd>L</kbd> <span data-zh="切换语言">language</span> · <kbd>T</kbd> <span data-zh="令牌">tokens</span></span>
+</footer>
+
+<!-- fidelity dial -->
+<div class="dial-hint" id="dialHint" data-zh="这个网站自带 PRD 和蓝图，转一下试试">This site ships with its PRD and blueprint. Turn the dial.</div>
+<div class="dial" id="dial" role="radiogroup" aria-label="Fidelity">
+  <span class="dial-thumb" id="dialThumb"></span>
+  <span class="dial-cap" data-zh="保真度">Fidelity</span>
+  <button role="radio" data-l="intent" aria-checked="false"><i>1</i><span data-zh="意图">Intent</span></button>
+  <button role="radio" data-l="system" aria-checked="false"><i>2</i><span data-zh="系统">System</span></button>
+  <button role="radio" data-l="shipped" aria-checked="true"><i>3</i><span data-zh="成品">Shipped</span></button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
