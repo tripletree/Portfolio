@@ -7,7 +7,7 @@ const $$ = (s, r = document) => [...r.querySelectorAll(s)];
 const root = document.documentElement;
 const store = { get(k) { try { return localStorage.getItem('tt.' + k); } catch { return null; } }, set(k, v) { try { localStorage.setItem('tt.' + k, v); } catch { /* private mode */ } } };
 const PAGE = document.body.dataset.page || 'index';
-const CASES = [['atlas', 'Atlas'], ['forge', 'Forge'], ['relay', 'Relay'], ['prism', 'Prism']];
+const CASES = [['atlas', 'Atlas'], ['forge', 'Forge'], ['relay', 'Relay'], ['prism', 'Prism'], ['randseed', 'Randseed']];
 let L = 'en';
 const T = (en, zh) => (L === 'zh' ? zh : en);
 const onLang = [];
@@ -173,8 +173,8 @@ addEventListener('keydown', e => {
   if (k === 'h') agentView(false);
   if (k === 'l') setLang(L === 'en' ? 'zh' : 'en');
   const i = CASES.findIndex(c => c[0] === PAGE);
-  if (i >= 0 && k === 'arrowright') go(CASES[(i + 1) % 4][0] + '.html');
-  if (i >= 0 && k === 'arrowleft') go(CASES[(i + 3) % 4][0] + '.html');
+  if (i >= 0 && k === 'arrowright') go(CASES[(i + 1) % CASES.length][0] + '.html');
+  if (i >= 0 && k === 'arrowleft') go(CASES[(i + CASES.length - 1) % CASES.length][0] + '.html');
 });
 
 /* ---------- home: ASCII field ---------- */

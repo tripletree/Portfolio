@@ -275,3 +275,20 @@ figcaption b { color: var(--ac); font-weight: 400; white-space: nowrap; }
 }
 @media (prefers-reduced-motion: reduce) { *, ::view-transition-group(*) { animation: none !important; transition: none !important; } .rv { opacity: 1; transform: none; } }
 .strip .shot img { aspect-ratio: 1440/1000; object-fit: cover; object-position: top left; }
+
+/* randseed */
+.figs.duo-phone { grid-template-columns: 2.6fr 1fr; align-items: start; }
+.phone-shot { padding: clamp(12px, 2vw, 28px); }
+.phone-shot img { max-width: 340px; margin: 0 auto; border-radius: 26px; border: 6px solid #26262A; }
+.swatches { padding: 0 var(--pad); display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; }
+.swatches > div { padding: 22px 18px; min-height: 190px; display: flex; flex-direction: column; gap: 6px; font-family: var(--mono); font-size: 11px; }
+.swatches > div:first-child { border-radius: 8px 0 0 8px; } .swatches > div:last-child { border-radius: 0 8px 8px 0; }
+.swatches b { font-family: var(--sans); font-weight: 500; font-size: 22px; letter-spacing: -.02em; }
+.swatches i { font-style: normal; margin-top: auto; opacity: .7; }
+.shot.live { padding: 0; background: #fff; }
+.shot.live iframe { display: block; width: 100%; height: 620px; border: 0; }
+@media (max-width: 900px) {
+  .figs.duo-phone { grid-template-columns: 1fr; }
+  .swatches { grid-template-columns: 1fr 1fr; } .swatches > div { min-height: 120px; border-radius: 0 !important; }
+  .shot.live iframe { height: 1560px; }
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RS components — live specimen</title>
+<link rel="stylesheet" href="design-system.css">
+<style>
+  html, body { margin: 0; background: #fff; }
+  body { padding: 28px; font-family: var(--font-family-sans, system-ui); color: var(--text-primary, #000); }
+  .g { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .cell { border: 1px solid var(--color-neutral-100, #EDEDEF); border-radius: 16px; padding: 20px; display: flex; flex-direction: column; gap: 14px; min-width: 0; }
+  .cell.wide { grid-column: span 2; }
+  .lbl { font: 500 11px/1 ui-monospace, Menlo, monospace; letter-spacing: .04em; color: var(--color-neutral-500, #6B6B75); text-transform: uppercase; display: flex; justify-content: space-between; }
+  .lbl code { text-transform: none; color: var(--color-purple-600, #5F40A1); }
+  .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+  .dark { background: #000; border-radius: 12px; padding: 18px; display: flex; justify-content: center; }
+  .cell > .btn { align-self: flex-start; }
+  .balance { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; font-size: 20px; }
+  .coin { width: 18px; height: 18px; border-radius: 50%; background: var(--color-coin, #FDC700); display: inline-block; }
+  @media (max-width: 760px) { body { padding: 16px; } .g { grid-template-columns: 1fr; } .cell.wide { grid-column: auto; } }
+</style>
+</head>
+<body>
+<div class="g">
+  <div class="cell wide"><div class="lbl">Button <code>.btn--solid · --outline · --accent · --sm/--lg · --loading</code></div>
+    <div class="row">
+      <button class="btn btn--solid btn--lg">Play now</button>
+      <button class="btn btn--outline btn--lg">How to win</button>
+      <button class="btn btn--solid btn--accent">Claim reward</button>
+      <button class="btn btn--outline btn--accent">Invite</button>
+      <button class="btn btn--solid btn--sm">Small</button>
+      <button class="btn btn--solid btn--loading" aria-busy="true">Saving</button>
+      <button class="btn btn--outline" disabled>Disabled</button>
+    </div></div>
+  <div class="cell"><div class="lbl">Tabs <code>.tabs</code></div>
+    <div class="tabs" role="tablist" id="tabs"><button class="tab tab--active" role="tab" aria-selected="true">Play</button><button class="tab" role="tab" aria-selected="false">Rank</button><button class="tab" role="tab" aria-selected="false">Payout</button></div></div>
+
+  <div class="cell"><div class="lbl">Input <code>.input</code></div>
+    <label><span class="input-label input-label--required">Wallet name</span><input class="input" placeholder="Main wallet"></label>
+    <label><span class="input-label">Amount</span><input class="input input--invalid" value="-5" aria-invalid="true"></label></div>
+  <div class="cell"><div class="lbl">Select <code>.select--form</code></div>
+    <label><span class="input-label">Network</span>
+      <div class="select select--form" data-select data-name="net">
+        <button type="button" class="select__trigger" aria-haspopup="listbox" aria-expanded="false"><span class="select__value">Choose a network…</span><span class="select__caret" aria-hidden="true"></span></button>
+        <ul class="select__panel" role="listbox" tabindex="-1" hidden>
+          <li class="select__option" role="option" data-value="sol">Solana</li><li class="select__option" role="option" data-value="icp">Internet Computer</li><li class="select__option" role="option" data-value="evm">EVM</li>
+        </ul></div></label></div>
+  <div class="cell"><div class="lbl">Checkbox · Switch</div>
+    <label class="checkbox-field"><input class="checkbox" type="checkbox" checked> Remember this device</label>
+    <label class="checkbox-field"><input class="checkbox" type="checkbox"> Email me daily jackpots</label>
+    <div class="row"><label class="switch"><input type="checkbox" role="switch" checked><span class="switch__slider"></span></label><span>Sound effects</span></div></div>
+
+  <div class="cell"><div class="lbl">Loading <code>.loading · on dark</code></div>
+    <div class="dark"><div class="loading" data-loading data-progress="64"><div class="loading__bar"><div class="loading__bar-fill"></div></div><p class="loading__label" data-template="Loading game… {value}%">Loading game… 64%</p></div></div>
+    <div class="lbl" style="margin-top:6px">Refresh <code>.refresh</code></div>
+    <span class="balance"><i class="coin"></i>1,284.50<button class="refresh" data-refresh aria-label="Refresh balance"><span class="refresh__icon" aria-hidden="true"></span></button></span></div>
+  <div class="cell"><div class="lbl">Spinner <code>.spinner__icon--brand</code></div>
+    <div class="spinner" role="status"><span class="spinner__icon spinner__icon--brand" aria-hidden="true"></span><p class="spinner__label">Loading…</p></div></div>
+  <div class="cell"><div class="lbl">Toast · Popup</div>
+    <div class="toast" role="status" style="position:static">Bet placed. Good luck!</div>
+    <button class="btn btn--outline" data-popup-open="pp">Open bottom sheet</button></div>
+</div>
+<div class="popup" id="pp" hidden><div class="popup__overlay" data-popup-close></div>
+  <div class="popup__sheet" role="dialog" aria-modal="true" aria-labelledby="pp-t"><h2 id="pp-t" class="popup__title">Share your win</h2><p class="popup__body">Send this round to a friend. They get a free ticket.</p>
+  <div class="popup__footer"><button class="btn btn--solid" data-popup-close>Copy link</button><button class="btn btn--outline" data-popup-close>Cancel</button></div></div></div>
+<script type="module">
+  import { initSelects } from './select.js'; import { initLoadings } from './loading.js'; import { initPopups } from './popup.js'; import { initInputs } from './input.js';
+  import initRefreshers from './refresh.js';
+  initSelects(); initLoadings(); initPopups(); initInputs(); initRefreshers();
+  const t = document.getElementById('tabs'); t.onclick = e => { const b = e.target.closest('.tab'); if (!b) return; t.querySelectorAll('.tab').forEach(x => { x.classList.toggle('tab--active', x === b); x.setAttribute('aria-selected', x === b); }); };
+</script>
+</body>
+</html>

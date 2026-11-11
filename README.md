@@ -7,9 +7,9 @@ A bilingual (EN default / 中文) portfolio. Static files, no framework, no buil
 | File | What |
 |---|---|
 | `index.html` | Home: hero, work index, operating model, services, contact |
-| `atlas.html` `forge.html` `relay.html` `prism.html` | One page per case study |
+| `atlas.html` `forge.html` `relay.html` `prism.html` `randseed.html` | One page per case study |
 | `site.css` `site.js` | Shared styles and behaviour |
-| `assets/` | Case-study images (client names removed) |
+| `assets/` | Case-study images (client names removed); `assets/rs/` holds the live Randseed component specimen |
 
 ## Things to try
 
@@ -28,4 +28,5 @@ python3 -m http.server 8080
 
 - `site.js` → `CONFIG.email`: set a public contact address. While empty, the contact button links to the GitHub profile.
 - Copy: English lives in the element, Chinese in its `data-zh` attribute.
-- Project names (Atlas, Forge, Relay, Prism) are codenames; client names are deliberately absent.
+- Atlas, Forge, Relay and Prism are codenames with client names deliberately absent; Randseed is shown under its own name.
+- The live specimen uses ES modules, so preview over HTTP (not file://).
