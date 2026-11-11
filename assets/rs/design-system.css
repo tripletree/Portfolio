@@ -1,0 +1,1657 @@
+/* RS Design System — bundled stylesheet. Generated; do not edit. */
+
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-neutral-50: #f7f7f8;
+  --color-neutral-100: #ededef;
+  --color-neutral-200: #d9d9de;
+  --color-neutral-300: #b8b8c0;
+  --color-neutral-400: #8e8e99;
+  --color-neutral-500: #6b6b75;
+  --color-neutral-600: #4d4d55;
+  --color-neutral-700: #3a3a40;
+  --color-neutral-800: #26262b;
+  --color-neutral-900: #131316;
+  --color-purple-50: #f4f0fb; /** Background Purple — surfaces, subtle fills, hover tints. */
+  --color-purple-100: #e9e1f6;
+  --color-purple-200: #d3c3ed;
+  --color-purple-300: #b49cdf;
+  --color-purple-400: #8b6bc9;
+  --color-purple-500: #6f4fb0;
+  --color-purple-600: #5f40a1; /** Foreground Purple — text, icons, accents on light backgrounds. */
+  --color-purple-700: #4c3380;
+  --color-purple-800: #3a2762;
+  --color-purple-900: #281a45;
+  --color-danger-500: #db2121;
+  --color-danger-600: #c11717; /** Danger — borders, icons, focus ring. */
+  --color-coin: #fdc700; /** Coin / currency gold — coin icons and amounts. */
+  --color-white-alpha-45: rgba(255, 255, 255, 0.45); /** White at 45% — progress-bar track on dark surfaces. */
+  --color-black-alpha-5: rgba(0, 0, 0, 0.05); /** Black at 5% — subtle hover wash (list rows / menu items). */
+  --color-black-alpha-10: rgba(0, 0, 0, 0.1); /** Black at 10% — solid (primary) button disabled fill. */
+  --color-black-alpha-25: rgba(0, 0, 0, 0.25); /** Black at 25% — solid (primary) button disabled text. */
+  --color-black-alpha-30: rgba(0, 0, 0, 0.3); /** Black at 30% — disabled borders / text on white; popup / sheet overlay scrim. */
+  --color-black-alpha-50: rgba(0, 0, 0, 0.5); /** Black at 50%. */
+  --color-black-alpha-60: rgba(0, 0, 0, 0.6); /** Black at 60% — select trigger caret. */
+  --color-black-alpha-65: rgba(0, 0, 0, 0.65); /** Black at 65% — secondary text (captions). */
+  --color-black-alpha-85: rgba(0, 0, 0, 0.85); /** Black at 85% — solid (primary) button hover. */
+  --radius-none: 0; /** 0px — square */
+  --radius-sm: 0.25rem; /** 4px — chips, small controls */
+  --radius-md: 0.5rem; /** 8px — cards, menus */
+  --radius-snug: 0.625rem; /** 10px — multi-line inputs (textarea) */
+  --radius-lg: 0.75rem; /** 12px — surfaces, modals */
+  --radius-xl: 1.25rem; /** 20px — inputs (component default), large surfaces */
+  --radius-full: 9999px; /** pill — buttons (component default), avatars */
+  --button-outline-bg: rgba(0, 0, 0, 0);
+  --shadow-dropdown: 0px 4px 12px rgba(0, 0, 0, 0.1); /** Bottom-sheet / overlay elevation — 0 4 12 black 10%. */
+  --shadow-popover: 0px 8px 24px rgba(0, 0, 0, 0.12); /** Select popover elevation — 0 8 24 black 12%. */
+  --select-icon-size: 1rem; /** 16px chevron — desktop. */
+  --select-icon-size-mobile: 1.25rem; /** 20px chevron — mobile. */
+  --select-form-height: 2.25rem; /** 36px desktop — same as the input default. */
+  --select-form-height-mobile: 3rem; /** 48px mobile — same as .input--lg. */
+  --select-filter-height: 2rem; /** 32px desktop — one step below the form select. */
+  --select-filter-height-mobile: 2.25rem; /** 36px mobile. */
+  --select-filter-min-width: 6rem; /** 96px — keeps short labels ('All') comfortable. */
+  --select-filter-max-width: 15rem; /** 240px desktop cap (mobile caps at 60% of the container). */
+  --select-panel-max-height: 20rem; /** 320px desktop (~8 options) — overflow scrolls. */
+  --select-panel-max-height-mobile: 18rem; /** 288px mobile (~6.5 options). */
+  --select-panel-max-width: 20rem; /** 320px — the panel may grow past the trigger up to this cap. */
+  --select-option-height: 2.25rem; /** 36px desktop row. */
+  --select-option-height-mobile: 2.75rem; /** 44px mobile row — minimum touch target. */
+  --loading-bar-width: 16.5rem; /** 264px default bar width (never overflows its parent; override with width). */
+  --loading-bar-height: 0.25rem; /** 4px bar. */
+  --spinner-icon-size: 3rem; /** 48px brand icon. */
+  --toast-min-width: 12.5rem; /** Toast minimum width (200px) — short toasts stay compact. */
+  --toast-max-width: 24rem; /** Toast maximum width on desktop (384px) — longer messages wrap; clamped to the viewport on narrow screens. */
+  --toast-min-height: 3.75rem; /** Toast minimum height (60px) — grows with content. */
+  --size-icon-sm: 1rem; /** Small icon — 16px. Inline with text, dense toolbars. */
+  --size-icon-md: 1.25rem; /** Medium icon — 20px. Default UI icon (buttons, inputs, list rows). */
+  --size-icon-lg: 1.5rem; /** Large icon — 24px. Section headers, primary actions. */
+  --size-icon-xl: 2rem; /** Extra-large icon — 32px. Feature tiles, empty states. */
+  --size-avatar-sm: 1.5rem; /** Small avatar — 24px. Inline mentions, dense lists. */
+  --size-avatar-md: 2rem; /** Medium avatar — 32px. Default list / comment avatar. */
+  --size-avatar-lg: 2.5rem; /** Large avatar — 40px. Cards, account nav. */
+  --size-avatar-xl: 3rem; /** Extra-large avatar — 48px. List / card headers. */
+  --size-avatar-2xl: 4rem; /** 2XL avatar — 64px. Profile headers. */
+  --space-0: 0; /** 0px */
+  --space-1: 0.25rem; /** 4px — base unit */
+  --space-2: 0.5rem; /** 8px */
+  --space-3: 0.75rem; /** 12px */
+  --space-4: 1rem; /** 16px */
+  --space-5: 1.25rem; /** 20px */
+  --space-6: 1.5rem; /** 24px */
+  --space-8: 2rem; /** 32px */
+  --space-10: 2.5rem; /** 40px */
+  --space-12: 3rem; /** 48px */
+  --font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  --font-family-mono: 'SFMono-Regular', Menlo, Consolas, 'Liberation Mono', monospace;
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  --font-size-xs: 0.75rem; /** 12px */
+  --font-size-sm: 0.875rem; /** 14px */
+  --font-size-md: 1rem; /** 16px */
+  --font-size-lg: 1.125rem; /** 18px */
+  --font-size-xl: 1.25rem; /** 20px */
+  --font-size-2xl: 1.5rem; /** 24px */
+  --font-size-3xl: 2rem; /** 32px */
+  --font-size-4xl: 2.25rem; /** 36px */
+  --font-line-height-tight: 1.2;
+  --font-line-height-normal: 1.5;
+  --font-line-height-relaxed: 1.65;
+  --text-primary: var(--color-black);
+  --text-subtle: var(--color-black-alpha-65); /** Secondary text — captions / muted copy (black 65%). */
+  --text-accent: var(--color-purple-600);
+  --text-disabled: var(--color-neutral-400);
+  --text-danger: var(--color-danger-600); /** Error / validation message text — #C11717 (AA on white, ~6.2:1). */
+  --bg-subtle: var(--color-purple-50); /** Background Purple surface. */
+  --border-accent: var(--color-purple-600);
+  --border-invalid: var(--color-danger-600); /** Error / invalid field border. */
+  --focus-ring: var(--color-purple-600); /** Focus-visible outline color. */
+  --button-solid-bg: var(--color-black);
+  --button-solid-bg-hover: var(--color-black-alpha-85); /** Solid (primary) button hover — 85% black (#000000D9). */
+  --button-solid-bg-active: var(--color-neutral-900);
+  --button-solid-bg-disabled: var(--color-black-alpha-10); /** Solid (primary) button disabled fill — 10% black (#0000001A). */
+  --button-solid-text: var(--color-white);
+  --button-solid-text-disabled: var(--color-black-alpha-25); /** Solid (primary) button disabled text — 25% black (#00000040). */
+  --button-outline-border: var(--color-black);
+  --button-outline-text: var(--color-black);
+  --button-outline-bg-hover: var(--color-neutral-50);
+  --button-outline-bg-active: var(--color-neutral-100);
+  --button-solid-accent-bg: var(--color-purple-50); /** Purple solid button — Background Purple fill. */
+  --button-solid-accent-bg-hover: var(--color-purple-100);
+  --button-solid-accent-bg-active: var(--color-purple-200);
+  --button-solid-accent-bg-disabled: var(--color-black-alpha-10); /** Disabled fill — black 10% (same as solid). */
+  --button-solid-accent-text: var(--color-purple-600); /** Purple solid button — Foreground Purple text. */
+  --button-solid-accent-text-disabled: var(--color-black-alpha-25); /** Disabled text — black 25% (same as solid). */
+  --input-bg: var(--color-black-alpha-5); /** Input field background — black 5% (#0000000D). */
+  --input-text: var(--color-black); /** Entered value text. */
+  --input-placeholder: var(--color-black-alpha-30); /** Placeholder text — black 30% (#0000004D). */
+  --input-border-focus: var(--color-purple-600); /** Focus border — Foreground Purple (no resting border). */
+  --input-border-invalid: var(--color-danger-600); /** Invalid field border / ring. */
+  --input-label: var(--color-black); /** Field label text. */
+  --input-required: var(--color-danger-500); /** Required-field asterisk marker. */
+  --select-value: var(--color-black); /** Chosen value — black, regular weight, reads like input text (both types). */
+  --select-placeholder: var(--color-black-alpha-30); /** Trigger placeholder — black 30% (matches input.placeholder). */
+  --select-caret: var(--color-black-alpha-60); /** Trigger chevron — black 60%. */
+  --select-border-invalid: var(--color-danger-600); /** Error-state trigger border (aria-invalid). */
+  --select-form-bg: var(--color-black-alpha-5); /** Form select fill — black 5%, same as input.bg. No border, no hover change. */
+  --select-form-padding-x: var(--space-3); /** 12px desktop. */
+  --select-form-padding-x-mobile: var(--space-4); /** 16px mobile. */
+  --select-form-font-size: var(--font-size-sm); /** 14px desktop. */
+  --select-form-font-size-mobile: var(--font-size-md); /** 16px mobile — ≥16px avoids iOS zoom-on-focus. */
+  --select-form-radius: var(--radius-xl); /** 20px — same radius as input. */
+  --select-filter-bg: var(--color-white);
+  --select-filter-border: var(--color-black-alpha-10); /** Filter select outline — black 10% hairline. No hover change. */
+  --select-filter-padding-x: var(--space-3); /** 12px. */
+  --select-filter-font-size: var(--font-size-xs); /** 12px desktop. */
+  --select-filter-font-size-mobile: var(--font-size-sm); /** 14px mobile. */
+  --select-filter-radius: var(--radius-full); /** Pill. */
+  --select-filter-gap: var(--space-2); /** 8px between adjacent filters (.select-group). */
+  --select-panel-bg: var(--color-white); /** Dropdown panel background. */
+  --select-panel-border: var(--color-black-alpha-10); /** Dropdown panel hairline border — black 10%. */
+  --select-panel-offset: var(--space-1); /** 4px gap from the trigger. */
+  --select-panel-radius: var(--radius-md); /** 8px desktop. */
+  --select-panel-radius-mobile: var(--radius-lg); /** 12px mobile. */
+  --select-option-text: var(--color-black); /** Dropdown option text. */
+  --select-option-hover-bg: var(--color-black-alpha-5); /** Option hover / keyboard-active wash — black 5%. */
+  --select-option-selected-bg: var(--color-black-alpha-5); /** Selected option highlight. */
+  --select-option-check: var(--color-purple-600); /** Selected checkmark — Foreground Purple. */
+  --select-option-padding-x: var(--space-3); /** 12px desktop. */
+  --select-option-padding-x-mobile: var(--space-4); /** 16px mobile. */
+  --checkbox-bg: var(--color-white); /** Unchecked fill. */
+  --checkbox-bg-checked: var(--color-purple-600); /** Checked fill — Foreground Purple. */
+  --checkbox-bg-disabled: var(--color-white); /** Disabled fill — white. */
+  --checkbox-border: var(--color-black-alpha-65); /** Unchecked border — black 65%. */
+  --checkbox-border-checked: var(--color-purple-600);
+  --checkbox-border-disabled: var(--color-black-alpha-30); /** Disabled border — black 30%. */
+  --checkbox-check: var(--color-white); /** Check / dash glyph. */
+  --checkbox-check-disabled: var(--color-neutral-400);
+  --switch-track-off: var(--color-neutral-300); /** Switch track — off. */
+  --switch-track-on: var(--color-purple-600); /** Switch track — on (Foreground Purple). */
+  --switch-thumb: var(--color-white); /** Switch knob. */
+  --popup-bg: var(--color-white); /** Bottom-sheet background. */
+  --popup-overlay: var(--color-black-alpha-30); /** Scrim behind the sheet — black 30%. */
+  --popup-title: var(--color-black); /** Sheet title — 16px semibold, black. */
+  --popup-body: var(--color-black-alpha-50); /** Sheet subtitle / body — 12px regular, black 50%. */
+  --loading-bar-track: var(--color-white-alpha-45); /** Unfilled part of the progress bar — white 45% (on dark surfaces). */
+  --loading-bar-fill: var(--color-white); /** Filled part of the progress bar — white. */
+  --loading-text: var(--color-white); /** Percent label — white (on dark surfaces). */
+  --spinner-label: var(--color-neutral-500); /** “Loading…” caption under the icon — neutral.500. */
+  --spinner-gap: var(--space-3); /** 12px between icon and label. */
+  --refresh-icon: var(--color-purple-600); /** Refresh control icon — Foreground Purple. */
+  --refresh-icon-size: var(--size-icon-sm); /** Refresh icon — 16px on desktop. */
+  --refresh-icon-size-mobile: var(--size-icon-md); /** Refresh icon — 20px on mobile. */
+  --toast-bg: var(--color-black-alpha-65); /** Toast background — black at 65%. */
+  --toast-text: var(--color-white); /** Toast text / icon — light on the dark surface. */
+  --tabs-text: var(--color-black-alpha-65); /** Inactive tab label — black 65%. */
+  --tabs-text-active: var(--color-black); /** Active tab label — black. */
+  --tabs-line: var(--color-black-alpha-65); /** Inactive underline — 1px black 65%. */
+  --tabs-line-active: var(--color-black); /** Active underline — 2px black. */
+}
+
+/**
+ * RS Design System — base layer.
+ * Maps native HTML elements onto steps of the type scale, so apps inherit
+ * correct type without per-element classes. Each element matches the same rule
+ * as the corresponding `.text-*` utility (see typography.css). Tokens only.
+ *
+ * Step         Element        Token  Weight     Color
+ * Heading      h1             3xl    semibold   text.primary
+ * Section      h2             2xl    semibold   text.primary
+ * Subsection   h3             xl     semibold   text.primary
+ * (emphasis)   strong, b      —      semibold*  inherit
+ * Body         body, p        sm     regular    text.primary
+ * Caption      small, figcap. xs     regular    text.subtle (65%)
+ * (*) strong/b stay inline: weight only, no size change.
+ */
+body {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-height-normal);
+  color: var(--text-primary);
+  font-weight: var(--font-weight-regular);
+}
+
+p {
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-height-normal);
+  color: var(--text-primary);
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-tight);
+  color: var(--text-primary);
+}
+
+h2 {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-tight);
+  color: var(--text-primary);
+}
+
+h3 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-tight);
+  color: var(--text-primary);
+}
+
+strong,
+b {
+  font-weight: var(--font-weight-semibold);
+}
+
+small,
+figcaption {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  color: var(--text-subtle);
+}
+
+/**
+ * RS Design System — Button
+ * Framework-agnostic. Apply .btn plus a variant (.btn--solid | .btn--outline)
+ * and optionally a size (.btn--sm | .btn--lg). All values reference design tokens.
+ */
+
+.btn {
+  /* layout */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  box-sizing: border-box;
+
+  /* typography */
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-tight);
+  text-decoration: none;
+  white-space: nowrap;
+
+  /* shape — default (md) size; 28px tall, text centred (no vertical padding) */
+  padding: 0 var(--space-4);
+  min-height: 1.75rem;
+  border: 1px solid transparent;
+  border-radius: var(--radius-full);
+
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 120ms ease, border-color 120ms ease, color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+/* Keyboard focus — purple ring that hugs the corner radius. Buttons have no
+   focus border, so a 2px box-shadow matches the ~2px ring on inputs (1px
+   border + 1px ring). Transparent outline kept as a forced-colors fallback. */
+.btn:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--focus-ring);
+}
+
+/* ---------------------------------------------------------------- Sizes */
+.btn--sm {
+  font-size: var(--font-size-xs);
+  /* 20px tall: zero vertical padding so the text line fits inside min-height. */
+  padding: 0 var(--space-3);
+  min-height: 1.25rem;
+}
+
+.btn--lg {
+  font-size: var(--font-size-md);
+  /* 40px tall, text centred (no vertical padding). */
+  padding: 0 var(--space-6);
+  min-height: 2.5rem;
+}
+
+/* ------------------------------------------------------- Icon in button */
+/* .btn is already inline-flex with a gap, so an icon + label just works.
+   Wrap an SVG in .btn__icon (or put the class on the <svg>); it inherits the
+   text color via currentColor and scales with the button's font-size. Mark
+   decorative icons aria-hidden="true". */
+.btn__icon {
+  flex: none;
+  width: 1.25em;
+  height: 1.25em;
+  fill: currentColor;
+}
+.btn__icon > svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Icon-only button — square. Always give it an aria-label. */
+.btn--icon-only {
+  padding-left: 0;
+  padding-right: 0;
+  width: 1.75rem; /* match medium height (28px) */
+  aspect-ratio: 1 / 1;
+}
+.btn--icon-only.btn--sm {
+  width: 1.25rem; /* 20px */
+}
+.btn--icon-only.btn--lg {
+  width: 2.5rem; /* 40px */
+}
+
+/* --------------------------------------------------------- Loading state */
+/* Add .btn--loading (and aria-busy="true"). The label + any icon fade out, a
+   centered spinner shows, and pointer interaction is off — but the brand color
+   stays (unlike :disabled). The button keeps its size so layout doesn't shift.
+   The spinner color is set per variant below (currentColor is transparent here). */
+.btn--loading::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 1em;
+  height: 1em;
+  border: 2px solid;
+  border-top-color: transparent;
+  border-radius: var(--radius-full);
+  animation: btn-spin 0.6s linear infinite;
+}
+.btn--solid.btn--loading::after {
+  border-color: var(--button-solid-text);
+  border-top-color: transparent;
+}
+.btn--outline.btn--loading::after {
+  border-color: var(--button-outline-text);
+  border-top-color: transparent;
+}
+.btn--solid.btn--accent.btn--loading::after {
+  border-color: var(--button-solid-accent-text);
+  border-top-color: transparent;
+}
+@keyframes btn-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* Respect reduced-motion — slow the spin rather than stop it (still conveys busy). */
+@media (prefers-reduced-motion: reduce) {
+  .btn--loading::after {
+    animation-duration: 1.5s;
+  }
+}
+
+/* --------------------------------------------------------- Solid variant */
+/* No visible stroke — fill only. The base keeps a 1px transparent border so the
+   button still shows an outline in forced-colors / high-contrast mode. */
+.btn--solid {
+  background-color: var(--button-solid-bg);
+  color: var(--button-solid-text);
+}
+.btn--solid:hover {
+  background-color: var(--button-solid-bg-hover);
+}
+.btn--solid:active {
+  background-color: var(--button-solid-bg-active);
+}
+.btn--solid:disabled,
+.btn--solid[aria-disabled='true'] {
+  background-color: var(--button-solid-bg-disabled);
+  color: var(--button-solid-text-disabled);
+  cursor: not-allowed;
+}
+
+/* ------------------------------------------------------- Outline variant */
+.btn--outline {
+  background-color: var(--button-outline-bg);
+  color: var(--button-outline-text);
+  border-color: var(--button-outline-border);
+}
+.btn--outline:hover {
+  background-color: var(--button-outline-bg-hover);
+}
+.btn--outline:active {
+  background-color: var(--button-outline-bg-active);
+}
+/* Disabled = the normal outline at 25% opacity (border + text fade uniformly). */
+.btn--outline:disabled,
+.btn--outline[aria-disabled='true'] {
+  opacity: 0.25;
+  cursor: not-allowed;
+}
+
+/* Purple accent modifier (--accent = purple treatment).
+   Pair with .btn--outline for a purple-outlined secondary button, or with
+   .btn--solid for a purple tonal button (Background Purple fill, Foreground
+   Purple text). */
+.btn--accent.btn--outline {
+  color: var(--text-accent);
+  border-color: var(--border-accent);
+}
+.btn--accent.btn--outline:hover {
+  background-color: var(--bg-subtle);
+}
+
+.btn--solid.btn--accent {
+  background-color: var(--button-solid-accent-bg);
+  color: var(--button-solid-accent-text);
+}
+.btn--solid.btn--accent:hover {
+  background-color: var(--button-solid-accent-bg-hover);
+}
+.btn--solid.btn--accent:active {
+  background-color: var(--button-solid-accent-bg-active);
+}
+.btn--solid.btn--accent:disabled,
+.btn--solid.btn--accent[aria-disabled='true'] {
+  background-color: var(--button-solid-accent-bg-disabled);
+  color: var(--button-solid-accent-text-disabled);
+}
+
+/* Loading base — kept last so its transparent label color wins over every
+   variant's color (equal specificity, later source order). The spinner itself
+   is drawn by .btn--loading::after above, colored per variant. */
+.btn.btn--loading {
+  position: relative;
+  color: transparent;
+  pointer-events: none;
+  cursor: wait;
+}
+
+/**
+ * RS Design System — Checkbox
+ * Framework-agnostic. Apply .checkbox to a native <input type="checkbox">.
+ * Sizes: .checkbox--sm | .checkbox--lg (default medium, 20px). Checked, hover,
+ * focus, and disabled states are automatic. The check is drawn with a mask so
+ * it scales and stays token-coloured.
+ */
+
+.checkbox {
+  --_check: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23000' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' d='M3.5 8.5l3 3 6-7'/%3E%3C/svg%3E");
+
+  appearance: none;
+  -webkit-appearance: none;
+  flex: none;
+  display: inline-block;
+  position: relative;
+  vertical-align: -0.15em;
+  inline-size: 1.25rem; /* md — 20px */
+  block-size: 1.25rem;
+  margin: 0;
+  box-sizing: border-box;
+  border: 1.5px solid var(--checkbox-border);
+  border-radius: var(--radius-sm);
+  background-color: var(--checkbox-bg);
+  cursor: pointer;
+  transition: background-color 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+}
+
+/* The glyph — masked so its colour comes from a token and it scales with size. */
+.checkbox::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: var(--checkbox-check);
+  opacity: 0;
+  -webkit-mask: var(--_check) center / 72% no-repeat;
+  mask: var(--_check) center / 72% no-repeat;
+}
+
+.checkbox:not(:disabled):hover {
+  border-color: var(--checkbox-border-checked);
+}
+
+.checkbox:checked {
+  background-color: var(--checkbox-bg-checked);
+  border-color: var(--checkbox-border-checked);
+}
+.checkbox:checked::before {
+  opacity: 1;
+}
+
+/* Keyboard focus — purple ring (matches buttons/inputs). */
+.checkbox:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--focus-ring);
+}
+
+.checkbox:disabled {
+  cursor: not-allowed;
+  background-color: var(--checkbox-bg-disabled);
+  border-color: var(--checkbox-border-disabled);
+}
+.checkbox:disabled:checked {
+  background-color: var(--checkbox-bg-disabled);
+  border-color: var(--checkbox-border-disabled);
+}
+.checkbox:disabled::before {
+  background-color: var(--checkbox-check-disabled);
+}
+
+/* ---------------------------------------------------------------- Sizes */
+.checkbox--sm {
+  inline-size: 1rem; /* 16px */
+  block-size: 1rem;
+  border-width: 1px;
+  border-radius: var(--radius-sm);
+}
+.checkbox--lg {
+  inline-size: 1.5rem; /* 24px */
+  block-size: 1.5rem;
+}
+
+/* Optional label layout: <label class="checkbox-field"> input + text </label> */
+.checkbox-field {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+}
+.checkbox-field:has(.checkbox:disabled) {
+  cursor: not-allowed;
+  color: var(--text-disabled);
+}
+
+/**
+ * RS Design System — Input
+ * Framework-agnostic text field. Apply .input to <input> or <textarea>, plus
+ * an optional size (.input--sm | .input--lg). Hover, focus, and disabled
+ * states are automatic. All values reference design tokens.
+ */
+
+.input {
+  /* layout */
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+
+  /* typography */
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-height-normal);
+  color: var(--input-text);
+
+  /* shape — default (md) size. Filled, no resting border: the grey fill is the
+     field affordance. The 1px transparent border reserves space so the focus /
+     error border doesn't shift layout. No hover change (reads like a fill). */
+  padding: var(--space-2) var(--space-3);
+  min-height: 2.25rem; /* 36px */
+  background-color: var(--input-bg);
+  border: 1px solid transparent;
+  border-radius: var(--radius-xl);
+
+  transition: border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.input::placeholder {
+  color: var(--input-placeholder);
+  opacity: 1; /* Firefox dims placeholders by default */
+}
+
+/* Keyboard/pointer focus — purple ring that hugs the corner radius. The 1px
+   box-shadow plus the 1px focus border (below) read as a single ~2px ring.
+   Transparent outline kept as a forced-colors / high-contrast fallback. */
+.input:focus,
+.input:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border-color: var(--input-border-focus);
+  box-shadow: 0 0 0 1px var(--focus-ring);
+}
+
+/* Disabled = the normal field at 60% opacity — no separate disabled palette. */
+.input:disabled,
+.input[aria-disabled='true'] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ------------------------------------------------------- Invalid state */
+/* Add .input--invalid (mirror with aria-invalid="true" on the element). */
+.input--invalid,
+.input[aria-invalid='true'] {
+  border-color: var(--input-border-invalid);
+}
+.input--invalid:focus,
+.input--invalid:focus-visible,
+.input[aria-invalid='true']:focus,
+.input[aria-invalid='true']:focus-visible {
+  border-color: var(--input-border-invalid);
+  box-shadow: 0 0 0 1px var(--border-invalid);
+}
+
+/* Multi-line fields are taller and use a snugger radius than single-line. */
+textarea.input {
+  min-height: 7.125rem; /* 114px */
+  border-radius: var(--radius-snug); /* 10px */
+  resize: vertical;
+}
+
+/* ---------------------------------------------------------------- Sizes */
+.input--sm {
+  font-size: var(--font-size-xs);
+  padding: var(--space-1) var(--space-2);
+  min-height: 2rem;
+}
+
+.input--lg {
+  font-size: var(--font-size-md);
+  padding: var(--space-3) var(--space-4);
+  min-height: 3rem;
+}
+
+/* ----------------------------------------------------------- Field label */
+/* Pair every field (input / textarea) with a label. .input-label is a
+   block, bold caption sitting above the control. Add .input-label--required for
+   the danger-red asterisk rendered before the text (e.g. "*Name"); always back
+   it with the field's `required` attribute so the state is conveyed to AT. */
+.input-label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-line-height-normal);
+  color: var(--input-label);
+}
+
+.input-label--required::before {
+  content: "*";
+  margin-right: 0.125em;
+  color: var(--input-required);
+}
+
+/* ------------------------------------------------- Character count (opt-in) */
+/* Wrap the field in .input-field and add a .input-field__count element to show
+   an in-field counter (e.g. "7/30"). Add .input-field--multiline for textarea.
+   The count text is app-managed; only the styling lives here. */
+.input-field {
+  position: relative;
+  display: block;
+}
+/* Reserve room so the value never runs under the counter. */
+.input-field > .input {
+  padding-right: var(--space-12);
+}
+.input-field--multiline > .input {
+  padding-right: var(--space-3);
+  padding-bottom: var(--space-8);
+}
+
+.input-field__count {
+  position: absolute;
+  right: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-xs);
+  line-height: 1;
+  color: var(--input-placeholder);
+  pointer-events: none;
+}
+.input-field--multiline .input-field__count {
+  top: auto;
+  bottom: var(--space-3);
+  transform: none;
+}
+
+/* Over the soft limit (data-maxlength, via src/js/input.js) — the counter turns
+   danger-red; the field itself gets .input--invalid from the enhancer. */
+.input-field__count--over {
+  color: var(--text-danger);
+}
+
+/**
+ * RS Design System — Loading (progress bar)
+ * A slim determinate/indeterminate progress bar with an optional percent
+ * label. Progress is driven by the --loading-progress custom property (0–100);
+ * the enhancer in src/js/loading.js keeps ARIA and the label in sync. All
+ * values reference design tokens.
+ *
+ *   <div class="loading" data-loading data-progress="86">
+ *     <div class="loading__bar"><div class="loading__bar-fill"></div></div>
+ *     <p class="loading__label" data-template="Loading… {value}%">Loading… 86%</p>
+ *   </div>
+ *
+ * Default width is 264px; it never overflows its parent. Set `width` on
+ * `.loading` (e.g. width: 100%) to span a container.
+ */
+
+.loading {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2); /* 8px between bar and label */
+  width: min(var(--loading-bar-width), 100%);
+  box-sizing: border-box;
+  font-family: var(--font-family-sans);
+}
+
+.loading[hidden] {
+  display: none;
+}
+
+.loading__bar {
+  width: 100%;
+  height: var(--loading-bar-height);
+  border-radius: var(--radius-full);
+  background-color: var(--loading-bar-track);
+  overflow: hidden;
+}
+
+.loading__bar-fill {
+  width: calc(var(--loading-progress, 0) * 1%);
+  height: 100%;
+  border-radius: var(--radius-full);
+  background-color: var(--loading-bar-fill);
+  transition: width 200ms ease-out;
+}
+
+/* Unknown duration — a 40% segment sweeps the track. */
+.loading__bar--indeterminate .loading__bar-fill {
+  width: 40%;
+  animation: loading-sweep 1.2s ease-in-out infinite;
+}
+
+@keyframes loading-sweep {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(250%);
+  }
+}
+
+/* "Loading… 86%" — optional; tabular digits so the number doesn't jitter. The
+   doubled selector outranks element-level typography (e.g. a host page's
+   `p { … }`) so the token colour and zeroed margin hold anywhere. */
+.loading .loading__label {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+  font-variant-numeric: tabular-nums;
+  color: var(--loading-text);
+}
+
+/* ---------------------------------------------------------- Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .loading__bar-fill {
+    transition: none;
+  }
+  .loading__bar--indeterminate .loading__bar-fill {
+    animation: none;
+    width: 100%;
+    opacity: 0.5; /* still reads as "busy", without the sweep */
+    transform: none;
+  }
+}
+
+/**
+ * RS Design System — Popup (bottom sheet)
+ * A bottom-anchored overlay that slides up. Behaviour + ARIA live in
+ * src/js/popup.js. All values reference design tokens.
+ *
+ *   <button class="btn btn--solid" data-popup-open="demo">Open</button>
+ *   <div class="popup" id="demo" hidden>
+ *     <div class="popup__overlay" data-popup-close></div>
+ *     <div class="popup__sheet" role="dialog" aria-modal="true" aria-labelledby="demo-title">
+ *       <h2 id="demo-title" class="popup__title">Title</h2>
+ *       <p class="popup__body">…</p>
+ *       <div class="popup__footer">
+ *         <button class="btn btn--outline" data-popup-close>Close</button>
+ *       </div>
+ *     </div>
+ *   </div>
+ */
+
+.popup {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* pin the sheet to the bottom */
+}
+
+.popup[hidden] {
+  display: none;
+}
+
+/* Scrim — tap to dismiss. */
+.popup__overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--popup-overlay);
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+/* Sheet — white, top corners rounded, slides up from the bottom. */
+.popup__sheet {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: var(--space-4); /* 16px global padding (top / left / right) */
+
+  background-color: var(--popup-bg);
+  border-radius: var(--radius-xl) var(--radius-xl) 0 0; /* 20px top only */
+  box-shadow: var(--shadow-dropdown);
+
+  transform: translateY(100%);
+  transition: transform 240ms ease;
+  /* Let the browser handle vertical scrolling of overflowing content;
+     popup.js claims downward drags that start at the top of the scroll
+     area for the swipe-down dismiss (see attachSwipe). */
+  touch-action: pan-y;
+  overscroll-behavior-y: contain; /* don't chain overscroll to the page (pull-to-refresh) */
+}
+
+/* Sheet text hierarchy (tokens only).
+   Header Title — 16px semibold, black. Subtitle / body — 12px regular, black 50%.
+   Buttons inside the sheet use the standard .btn component. */
+.popup__title {
+  margin: 0;
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-tight);
+  color: var(--popup-title);
+}
+
+.popup__body {
+  margin: var(--space-2) 0 0; /* 8px — title → subtitle rhythm */
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-line-height-normal);
+  color: var(--popup-body);
+}
+
+/* Bottom action bar — a row of buttons that sticks to the sheet's bottom edge
+   while the content above scrolls. White background, full-bleed to the sheet
+   edges (negative margins cancel the sheet's 16px padding), with a comfortable
+   gap from the content above (content → button rhythm). */
+.popup__footer {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  gap: var(--space-2);
+  margin: var(--space-6) calc(-1 * var(--space-4)) calc(-1 * var(--space-4));
+  padding: var(--space-4);
+  background-color: var(--popup-bg);
+}
+
+/* Open state (toggled by the enhancer). */
+.popup.is-open .popup__overlay {
+  opacity: 1;
+}
+.popup.is-open .popup__sheet {
+  transform: none;
+}
+
+.popup__sheet:focus {
+  outline: none; /* programmatic focus target; visible focus stays on controls */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .popup__overlay,
+  .popup__sheet {
+    transition: none;
+  }
+}
+
+/**
+ * RS Design System — Refresh
+ * A small icon button that refreshes a value. The circular-arrow icon spins two
+ * full turns on trigger — once when the view loads (signalling the value was
+ * refreshed) and again on each click. Purple (Foreground Purple) icon.
+ *
+ * Real <button> + aria-label; the spin is driven by src/js/refresh.js, which
+ * toggles `.is-spinning` (removed on animationend) and emits a `refresh` event.
+ * For an async reload, `.refresh--busy` spins continuously until it clears.
+ * All values reference design tokens.
+ *
+ *   <button class="refresh" data-refresh aria-label="Refresh balance">
+ *     <span class="refresh__icon" aria-hidden="true"></span>
+ *   </button>
+ */
+
+.refresh {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-1);
+  border: 0;
+  border-radius: var(--radius-sm);
+  background: none;
+  color: var(--refresh-icon);
+  cursor: pointer;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.refresh:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+}
+
+.refresh:disabled,
+.refresh[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* The circular-arrow glyph. `currentColor` fill through the mask keeps it the
+   token colour; sized at the mobile tier, switching to the desktop tier at
+   48rem — the same breakpoint the Select chevron uses. */
+.refresh__icon {
+  display: block;
+  width: var(--refresh-icon-size-mobile);
+  height: var(--refresh-icon-size-mobile);
+  background: currentColor;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%23000'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpolyline%20points='23%204%2023%2010%2017%2010'/%3E%3Cpath%20d='M20.49%2015a9%209%200%201%201-2.12-9.36L23%2010'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%23000'%20stroke-width='2'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpolyline%20points='23%204%2023%2010%2017%2010'/%3E%3Cpath%20d='M20.49%2015a9%209%200%201%201-2.12-9.36L23%2010'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+}
+
+@media (min-width: 48rem) {
+  .refresh__icon {
+    width: var(--refresh-icon-size);
+    height: var(--refresh-icon-size);
+  }
+}
+
+/* Two full turns per trigger (page load + each click). */
+.refresh.is-spinning .refresh__icon {
+  animation: refresh-spin-2 1s ease;
+}
+
+/* Async reload: keep turning until the app clears `--busy`. */
+.refresh--busy .refresh__icon {
+  animation: refresh-spin 1s linear infinite;
+}
+
+@keyframes refresh-spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Trigger spin — two turns in one continuous easing (not two eased laps). */
+@keyframes refresh-spin-2 {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(720deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .refresh.is-spinning .refresh__icon,
+  .refresh--busy .refresh__icon {
+    animation: none;
+  }
+}
+
+/**
+ * RS Design System — Select (custom, JS-driven listbox)
+ * The design system's dropdown — use it wherever a value is picked from a
+ * list. Two variants, chosen by context (never sized per page):
+ *
+ *   .select--form    form fields, next to inputs — grey fill, no border,
+ *                    fills its container (constrain width at the container)
+ *   .select (bare)   list/data-page filters — white outlined pill, sized by
+ *                    its content between min/max bounds (the default look)
+ *
+ * Every size switches between a mobile and a desktop tier at 48rem. Markup is
+ * a button trigger + a role="listbox" panel; behaviour and ARIA wiring live
+ * in src/js/select.js. All values reference design tokens.
+ *
+ *   <div class="select select--form" data-select>
+ *     <button type="button" class="select__trigger" aria-haspopup="listbox" aria-expanded="false">
+ *       <span class="select__value select__value--placeholder">Choose an option…</span>
+ *       <span class="select__caret" aria-hidden="true"></span>
+ *     </button>
+ *     <ul class="select__panel" role="listbox" tabindex="-1" hidden>
+ *       <li class="select__option" role="option" data-value="london">London</li>
+ *     </ul>
+ *   </div>
+ */
+
+/* Mobile tier first; the 48rem media query below switches every private
+   custom property to the desktop tier in one place. */
+.select {
+  --_height: var(--select-filter-height-mobile);
+  --_pad-x: var(--select-filter-padding-x);
+  --_font: var(--select-filter-font-size-mobile);
+  --_radius: var(--select-filter-radius);
+  --_icon: var(--select-icon-size-mobile);
+  --_opt-h: var(--select-option-height-mobile);
+  --_opt-pad-x: var(--select-option-padding-x-mobile);
+  --_panel-max-h: var(--select-panel-max-height-mobile);
+  --_panel-radius: var(--select-panel-radius-mobile);
+
+  position: relative;
+  display: inline-block;
+  min-width: var(--select-filter-min-width);
+  max-width: 60%; /* filter cap on mobile — don't crowd sibling filters */
+}
+
+.select--form {
+  --_height: var(--select-form-height-mobile);
+  --_pad-x: var(--select-form-padding-x-mobile);
+  --_font: var(--select-form-font-size-mobile);
+  --_radius: var(--select-form-radius);
+
+  display: block;
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+}
+
+@media (min-width: 48rem) {
+  .select {
+    --_height: var(--select-filter-height);
+    --_font: var(--select-filter-font-size);
+    --_icon: var(--select-icon-size);
+    --_opt-h: var(--select-option-height);
+    --_opt-pad-x: var(--select-option-padding-x);
+    --_panel-max-h: var(--select-panel-max-height);
+    --_panel-radius: var(--select-panel-radius);
+
+    max-width: var(--select-filter-max-width);
+  }
+  .select--form {
+    --_height: var(--select-form-height);
+    --_pad-x: var(--select-form-padding-x);
+    --_font: var(--select-form-font-size);
+
+    max-width: none;
+  }
+}
+
+/* A row of filter selects, e.g. at the top of a list page. */
+.select-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--select-filter-gap);
+}
+
+/* ------------------------------------------------------------------ Trigger */
+.select__trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  width: 100%;
+  box-sizing: border-box;
+  height: var(--_height);
+  padding: 0 var(--_pad-x);
+  font-family: var(--font-family-sans);
+  font-size: var(--_font);
+  line-height: var(--font-line-height-normal);
+  text-align: left;
+  background-color: var(--select-filter-bg);
+  border: 1px solid var(--select-filter-border);
+  border-radius: var(--_radius);
+  cursor: pointer;
+  transition: border-color 120ms ease, background-color 120ms ease,
+    box-shadow 120ms ease;
+}
+
+/* Form fill has no visible border — kept 1px transparent so the error state
+   doesn't shift layout. */
+.select--form .select__trigger {
+  background-color: var(--select-form-bg);
+  border-color: transparent;
+}
+
+/* Focus — purple border + 1px shadow read as a single ~2px ring (same recipe
+   as .input). Opening the panel adds no ring; the panel appearing plus the
+   rotated chevron are the open affordance. Transparent outline is a
+   high-contrast / forced-colors fallback. */
+.select__trigger:focus-visible {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  border-color: var(--focus-ring);
+  box-shadow: 0 0 0 1px var(--focus-ring);
+}
+
+/* Disabled = the normal trigger at 50% opacity — no separate palette. */
+.select__trigger:disabled,
+.select__trigger[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Error — set aria-invalid="true" on the trigger and link the message text
+   with aria-describedby (style the message with text.danger, 12px). */
+.select__trigger[aria-invalid='true'] {
+  border-color: var(--select-border-invalid);
+}
+.select__trigger[aria-invalid='true']:focus-visible {
+  border-color: var(--select-border-invalid);
+  box-shadow: 0 0 0 1px var(--select-border-invalid);
+}
+
+/* Chosen value — plain black like input text, regular weight, single line with
+   ellipsis. Colour alone sets it apart from the grey placeholder below. */
+.select__value {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: var(--select-value);
+  font-weight: var(--font-weight-regular);
+}
+
+/* Nothing chosen yet — grey, regular weight. The enhancer adds/removes this. */
+.select__value--placeholder {
+  color: var(--select-placeholder);
+  font-weight: var(--font-weight-regular);
+}
+
+/* Chevron-down icon, drawn via mask so tokens can color it. */
+.select__caret {
+  flex: none;
+  width: var(--_icon);
+  height: var(--_icon);
+  background-color: var(--select-caret);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='m3.5 6 4.5 4.5L12.5 6'/%3E%3C/svg%3E")
+    no-repeat center / contain;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round' d='m3.5 6 4.5 4.5L12.5 6'/%3E%3C/svg%3E")
+    no-repeat center / contain;
+  transition: transform 150ms ease-out;
+}
+
+.select__trigger[aria-expanded='true'] .select__caret {
+  transform: rotate(180deg);
+}
+
+/* ------------------------------------------------------------------- Panel */
+.select__panel {
+  position: absolute;
+  left: 0;
+  top: calc(100% + var(--select-panel-offset));
+  z-index: 50;
+  box-sizing: border-box;
+  width: max-content;
+  min-width: 100%; /* at least as wide as the trigger… */
+  max-width: min(var(--select-panel-max-width), calc(100vw - var(--space-8)));
+  margin: 0;
+  padding: var(--space-1); /* breathing room so option hover is inset */
+  list-style: none;
+  max-height: var(--_panel-max-h); /* ~6.5 rows mobile / ~8 desktop */
+  overflow-y: auto;
+  background-color: var(--select-panel-bg);
+  border: 1px solid var(--select-panel-border);
+  border-radius: var(--_panel-radius);
+  box-shadow: var(--shadow-popover);
+  animation: select-panel-in 150ms ease-out;
+}
+
+.select__panel[hidden] {
+  display: none;
+}
+
+/* The enhancer flips the panel above the trigger when there's no room below. */
+.select__panel--up {
+  top: auto;
+  bottom: calc(100% + var(--select-panel-offset));
+  animation-name: select-panel-in-up;
+}
+
+/* Closing — the enhancer sets data-closing, then hides on animationend. */
+.select__panel[data-closing] {
+  animation: select-panel-out 100ms ease-in forwards;
+  pointer-events: none;
+}
+
+@keyframes select-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(calc(-1 * var(--space-1)));
+  }
+}
+@keyframes select-panel-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(var(--space-1));
+  }
+}
+@keyframes select-panel-out {
+  to {
+    opacity: 0;
+  }
+}
+
+/* ------------------------------------------------------------------ Option */
+/* -webkit-box lets long labels wrap to at most two lines, then truncate.
+   line-height is fixed so the paddings center a single-line row exactly. */
+.select__option {
+  position: relative;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  box-sizing: border-box;
+  min-height: var(--_opt-h);
+  padding: calc((var(--_opt-h) - 1.25rem) / 2) var(--_opt-pad-x);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-family-sans);
+  font-size: var(--_font);
+  line-height: 1.25rem;
+  color: var(--select-option-text);
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Pointer hover and keyboard active share the same wash. */
+.select__option:hover,
+.select__option[data-active='true'] {
+  background-color: var(--select-option-hover-bg);
+}
+
+/* Selected — grey highlight, medium weight, and a purple ✓ on the right. */
+.select__option[aria-selected='true'] {
+  background-color: var(--select-option-selected-bg);
+  padding-right: calc(var(--_opt-pad-x) + 1.25rem);
+}
+
+.select__option[aria-selected='true']::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: var(--_opt-pad-x);
+  width: 1rem;
+  height: 1rem;
+  transform: translateY(-50%);
+  background-color: var(--select-option-check);
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='m3 8.5 3.5 3.5L13 5'/%3E%3C/svg%3E")
+    no-repeat center / contain;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' d='m3 8.5 3.5 3.5L13 5'/%3E%3C/svg%3E")
+    no-repeat center / contain;
+}
+
+.select__option[aria-disabled='true'] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ---------------------------------------------------------- Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .select__panel {
+    animation: none;
+  }
+  .select__panel[data-closing] {
+    display: none;
+  }
+  .select__caret {
+    transition: none;
+  }
+}
+
+/**
+ * RS Design System — Spinner
+ * A compact "working…" indicator: a brand icon that spins, with an optional
+ * caption below. No scrim — it sits inline in whatever region is loading.
+ * Pure CSS (no JS); mark it `role="status"` so assistive tech announces it.
+ * All values reference design tokens.
+ *
+ *   <div class="spinner" role="status">
+ *     <span class="spinner__icon spinner__icon--brand" aria-hidden="true"></span>
+ *     <p class="spinner__label">Loading…</p>
+ *   </div>
+ *
+ * The icon is your own <img>/<svg> inside .spinner__icon, or add
+ * .spinner__icon--brand for the RS clover. Add .spinner--block to fill the
+ * width and centre horizontally inside a card or column.
+ */
+
+.spinner {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spinner-gap);
+  font-family: var(--font-family-sans);
+}
+
+.spinner[hidden] {
+  display: none;
+}
+
+/* Fills the width and centres horizontally — for a card or content column. */
+.spinner--block {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+/* Centres the whole unit — both axes — inside a positioned parent, without
+   disturbing its own icon-over-label layout (absolute + inset + margin:auto).
+   Give the parent `position: relative` (or absolute/fixed) and a height. Use
+   this for a full-page load or a loading panel; placement is identical on
+   mobile and desktop — only the surrounding whitespace grows. */
+.spinner--center {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: fit-content;
+  height: fit-content;
+}
+
+/* Spinning icon. Continuous rotation reads as "working"; the RS clover is
+   radially symmetric so it spins cleanly. For a non-symmetric logo, override
+   `animation` (e.g. a pulse) so it doesn't tumble. */
+.spinner__icon {
+  display: block;
+  width: var(--spinner-icon-size);
+  height: var(--spinner-icon-size);
+  animation: spinner-spin 1.2s linear infinite;
+}
+
+.spinner__icon > svg,
+.spinner__icon > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* The RS clover, baked in — no markup inside needed. */
+.spinner__icon--brand {
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 22 22'%3E%3Cpath d='M15.8595 18.2535C15.0268 15.3673 12.2503 12.8819 11.0014 12C9.75256 12.7216 6.70073 15.6078 6.07627 18.4941C5.3896 21.6678 9.5444 23.545 11.0014 20.1777C11.834 23.545 16.9002 21.8614 15.8595 18.2535Z' fill='%231569B2'/%3E%3Cpath d='M15.8595 3.74646C15.0268 6.63271 12.2503 9.11809 11.0014 10C9.75256 9.27844 6.70073 6.39219 6.07627 3.50594C5.3896 0.332184 9.5444 -1.54499 11.0014 1.8223C11.834 -1.545 16.9002 0.138649 15.8595 3.74646Z' fill='%23EF9331'/%3E%3Cpath d='M3.74646 15.8598C6.63271 15.0271 9.11809 12.2506 10 11.0017C9.27844 9.75286 6.39219 6.70104 3.50594 6.07658C0.332184 5.38991 -1.54499 9.54471 1.8223 11.0017C-1.54499 11.8343 0.138649 16.9005 3.74646 15.8598Z' fill='%236E3892'/%3E%3Cpath d='M18.2535 15.8598C15.3673 15.0271 12.8819 12.2506 12 11.0017C12.7216 9.75286 15.6078 6.70104 18.4941 6.07658C21.6678 5.38991 23.545 9.54471 20.1777 11.0017C23.545 11.8343 21.8614 16.9005 18.2535 15.8598Z' fill='%2346B186'/%3E%3C/svg%3E")
+    center / contain no-repeat;
+}
+
+@keyframes spinner-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* "Loading…" — the doubled selector outranks a host page's `p { … }`. */
+.spinner .spinner__label {
+  margin: 0;
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-height-normal);
+  color: var(--spinner-label);
+}
+
+/* ---------------------------------------------------------- Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .spinner__icon {
+    animation: none;
+  }
+}
+
+/**
+ * RS Design System — Switch (toggle)
+ * A binary on/off control. Wrap a native checkbox so it stays accessible and
+ * form-friendly; the visible track + knob is a sibling <span>. Add role="switch"
+ * to the input. All values reference design tokens.
+ *
+ *   <label class="switch">
+ *     <input type="checkbox" role="switch" />
+ *     <span class="switch__slider"></span>
+ *     <span class="switch__label">Notifications</span>   <!-- optional -->
+ *   </label>
+ */
+
+.switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  cursor: pointer;
+}
+
+/* The real checkbox — visually hidden but focusable and submitted with forms. */
+.switch > input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  opacity: 0;
+}
+
+/* Track */
+.switch__slider {
+  position: relative;
+  flex: none;
+  width: 2.25rem; /* 36px */
+  height: 1.25rem; /* 20px */
+  border-radius: var(--radius-full);
+  background-color: var(--switch-track-off);
+  transition: background-color 120ms ease;
+}
+
+/* Knob */
+.switch__slider::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 1rem; /* 16px */
+  height: 1rem;
+  border-radius: var(--radius-full);
+  background-color: var(--switch-thumb);
+  transition: transform 120ms ease;
+}
+
+.switch > input:checked + .switch__slider {
+  background-color: var(--switch-track-on);
+}
+.switch > input:checked + .switch__slider::before {
+  transform: translateX(1rem); /* 36 − 16 − 2 − 2 = 16px travel */
+}
+
+/* Keyboard focus — purple ring hugging the track (a11y). */
+.switch > input:focus-visible + .switch__slider {
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 2px var(--focus-ring);
+}
+
+/* Disabled = the whole control at 50% opacity (on/off stays distinguishable). */
+.switch > input:disabled + .switch__slider {
+  opacity: 0.5;
+}
+.switch:has(> input:disabled) {
+  cursor: not-allowed;
+}
+
+.switch__label {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-height-normal);
+  color: var(--text-primary);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .switch__slider,
+  .switch__slider::before {
+    transition: none;
+  }
+}
+
+/**
+ * RS Design System — Tabs
+ * Content switcher with a bottom-line indicator. Mark up a row of `.tab`
+ * buttons in `.tabs`; the selected one gets `.tab--active` (or
+ * `aria-selected="true"`). Active = black label (semibold) + 2px black line;
+ * inactive = black 65% label + 1px black 65% line. Tokens only.
+ */
+
+.tabs {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--space-6);
+}
+
+.tab {
+  appearance: none;
+  -webkit-appearance: none;
+  margin: 0;
+  padding: var(--space-3) 0;
+  background: none;
+  border: 0;
+
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-line-height-tight);
+  color: var(--tabs-text);
+  white-space: nowrap;
+  cursor: pointer;
+
+  /* Inactive indicator — 1px black 65%. box-shadow draws the line without
+     shifting layout when it grows to 2px on the active tab. */
+  box-shadow: inset 0 -1px 0 var(--tabs-line);
+  transition: color 120ms ease, box-shadow 120ms ease;
+}
+
+.tab:hover {
+  color: var(--tabs-text-active);
+}
+
+.tab--active,
+.tab[aria-selected='true'] {
+  color: var(--tabs-text-active);
+  font-weight: var(--font-weight-semibold);
+  box-shadow: inset 0 -2px 0 var(--tabs-line-active);
+}
+
+.tab:focus-visible {
+  outline: 2px solid var(--focus-ring);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}
+
+.tab:disabled,
+.tab[aria-disabled='true'] {
+  color: var(--text-disabled);
+  cursor: not-allowed;
+}
+
+/**
+ * RS Design System — Toast
+ * A transient notification: a dark translucent surface (black 65%) with light
+ * text. Its width is content-sized between token bounds (min 200px, max 384px)
+ * and clamped to the viewport, so it never overflows on narrow screens. Stack
+ * and position several with the optional .toast-viewport. The
+ * show/hide/auto-dismiss behaviour is app-managed. Tokens only.
+ * Dismiss is handled by the app (e.g. auto-timeout); no close button.
+ */
+
+.toast {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-3);
+  inline-size: max-content; /* size to content, bounded below/above by tokens */
+  min-inline-size: var(--toast-min-width); /* 200px floor — short toasts stay tidy */
+  max-inline-size: min(var(--toast-max-width), calc(100vw - var(--space-8))); /* 384px cap; shrinks with a gutter on narrow screens */
+  min-block-size: var(--toast-min-height); /* 60px — grows with content */
+  box-sizing: border-box;
+  padding: var(--space-3) var(--space-4);
+
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-sm);
+  line-height: var(--font-line-height-normal);
+  color: var(--toast-text);
+
+  background-color: var(--toast-bg);
+  border-radius: var(--radius-lg);
+}
+
+/* Optional fixed stack (bottom-centre by default). */
+.toast-viewport {
+  position: fixed;
+  inset-block-end: var(--space-6);
+  inset-inline: 0;
+  z-index: 50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  pointer-events: none;
+}
+.toast-viewport > .toast {
+  pointer-events: auto;
+}
+
+/**
+ * RS Design System — typography scale utilities.
+ * One opt-in class per step of the size scale (see Design.md / typography docs).
+ * Each rule bundles the canonical weight + line-height for that size; colour is
+ * left to the element / a separate text-colour role. Tokens only.
+ *
+ * Class            Token  Size   Weight     Line-height
+ * .text-display    4xl    36px   bold       tight
+ * .text-heading    3xl    32px   semibold   tight
+ * .text-section    2xl    24px   semibold   tight
+ * .text-subsection xl     20px   semibold   tight
+ * .text-lead       lg     18px   regular    normal
+ * .text-body-lg    md     16px   regular    normal
+ * .text-body       sm     14px   regular    normal
+ * .text-caption    xs     12px   regular    normal
+ */
+.text-display {
+  font-size: var(--font-size-4xl);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--font-line-height-tight);
+}
+
+.text-heading {
+  font-size: var(--font-size-3xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-tight);
+}
+
+.text-section {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-tight);
+}
+
+.text-subsection {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--font-line-height-tight);
+}
+
+.text-lead {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-line-height-normal);
+}
+
+.text-body-lg {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-line-height-normal);
+}
+
+.text-body {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-line-height-normal);
+}
+
+.text-caption {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-regular);
+  line-height: var(--font-line-height-normal);
+}

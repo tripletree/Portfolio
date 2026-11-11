@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Randseed — visual design and a design system agents can call · tripletree</title>
+<meta name="description" content="Case study: visual UI design for Randseed, a consumer game platform, plus a token-driven design system packaged as components for AI coding agents.">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230A0A0B'/%3E%3Crect x='5' y='3' width='6' height='10' fill='%23D6FF3D'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
+</head>
+<body data-page="randseed">
+<main>
+<header class="c-hero" data-crumb="overview">
+  <p class="m"><a href="index.html#work">index</a> / <span data-zh="项目 05 — 视觉设计 + 设计系统 · ToC">case 05 — visual design + design system · consumer</span></p>
+  <h1 style="view-transition-name:t-randseed">Randseed</h1>
+  <p class="c-lede" data-zh="一个面向大众玩家的链上游戏平台：我做了视觉与 UI，再把它压缩成一套 AI 编码 Agent 可以直接调用的组件系统。">A consumer game platform on public, verifiable randomness. I designed its visual language and UI, then compressed it into a component system AI coding agents can call directly.</p>
+  <dl class="c-meta">
+    <div><dt class="m" data-zh="产品">Product</dt><dd data-zh="Randseed 玩家端 + 开发者平台">Randseed player app + developer platform</dd></div>
+    <div><dt class="m" data-zh="角色">Role</dt><dd data-zh="视觉与 UI 设计，设计系统负责人">Visual and UI design, design system owner</dd></div>
+    <div><dt class="m" data-zh="交付">Delivered</dt><dd>DTCG tokens · CSS components · Tailwind preset · Figma library · docs · agent rules</dd></div>
+    <div><dt class="m" data-zh="链接">Links</dt><dd><a class="ac" href="https://randseed.org/" target="_blank" rel="noopener">randseed.org ↗</a> · <a class="ac" href="https://github.com/tripletree" target="_blank" rel="noopener">GitHub ↗</a></dd></div>
+  </dl>
+</header>
+
+<div class="figs duo-phone">
+  <figure class="rv"><div class="shot"><img src="assets/seed-desktop.jpg" alt="Randseed home on desktop" loading="lazy"></div><figcaption><b>FIG 01</b><span data-zh="线上首页（桌面，已去掉活动横幅）：按类型分组的游戏，界面本身克制，把颜色留给游戏美术。">The live home on desktop (promotional banners removed): games grouped by type on calm surfaces, so the game art carries the colour.</span></figcaption></figure>
+  <figure class="rv"><div class="shot phone-shot"><img src="assets/seed-mobile.jpg" alt="Randseed home on a phone" loading="lazy"></div><figcaption><b>FIG 02</b><span data-zh="手机端：同一套组件，单列排布，主操作「Play Now」用浅紫强调按钮。">On a phone: same components in one column; the primary “Play Now” uses the tonal purple accent button.</span></figcaption></figure>
+</div>
+
+<div class="nums rv">
+  <div><b>11</b><span class="m" data-zh="个组件，纯 CSS，框架无关">components, plain CSS, framework-agnostic</span></div>
+  <div><b>6 → 4</b><span class="m" data-zh="份令牌文件，编译出 4 种产物">token files compiled into four outputs</span></div>
+  <div><b>36</b><span class="m" data-zh="个按钮变体（Figma 组件集）">button variants in the Figma component set</span></div>
+  <div><b>3</b><span class="m" data-zh="类 Agent 规则文件">agent rule files: Claude, Copilot, skill</span></div>
+</div>
+
+<section class="ch" data-crumb="01 visual">
+  <div class="ch-n m rv"><b>01</b><span data-zh="视觉">Visual</span></div>
+  <div class="rv">
+    <h2 data-zh="黑做主角，紫做点缀，颜色留给游戏。">Black leads, purple accents, colour belongs to the games.</h2>
+    <p data-zh="玩家打开 Randseed 是为了玩，不是为了看界面。所以我把界面压得很安静：<b>主色是纯黑</b>，承担主操作和文字；<b>辅色是一组紫</b>（前景 #5F40A1、背景 #F4F0FB），只用于焦点、链接和次要强调。游戏图标这些需要喊出来的东西，自己带颜色。">People open Randseed to play, not to admire chrome. So the interface stays quiet: <b>black is primary</b>, carrying main actions and text; <b>purple is secondary</b> (foreground #5F40A1, background #F4F0FB), reserved for focus, links and secondary emphasis. Game icons, the things that need to shout, bring their own colour.</p>
+    <p data-zh="唯一的例外是金币黄 #FDC700：它只出现在金额和代币上，不做品牌色也不做装饰。规则写死之后，任何人加的新页面都会自然地「像 Randseed」。">The single exception is coin yellow #FDC700. It appears only on amounts and tokens, never as brand or decoration. Once rules like this are fixed, any new page anyone adds naturally looks like Randseed.</p>
+  </div>
+</section>
+<div class="figs swatches rv no-md">
+  <div style="background:#000;color:#fff"><b>Black</b><span>color.black · #000000</span><i>primary · actions · text</i></div>
+  <div style="background:#5F40A1;color:#fff"><b>Purple 600</b><span>color.purple.600 · #5F40A1</span><i>focus · links · accent</i></div>
+  <div style="background:#F4F0FB;color:#281A45"><b>Purple 50</b><span>color.purple.50 · #F4F0FB</span><i>surfaces · tonal buttons</i></div>
+  <div style="background:#FDC700;color:#000"><b>Coin</b><span>color.coin · #FDC700</span><i>amounts only</i></div>
+  <div style="background:#C11717;color:#fff"><b>Danger 600</b><span>color.danger.600 · #C11717</span><i>errors only</i></div>
+</div>
+
+<section class="ch" data-crumb="02 system">
+  <div class="ch-n m rv"><b>02</b><span data-zh="系统">System</span></div>
+  <div class="rv">
+    <h2 data-zh="一份令牌，四种产物，一个 Figma 库。">One set of tokens, four outputs, one Figma library.</h2>
+    <p data-zh="所有数值都写在 <b>tokens/ 下的 W3C DTCG JSON</b> 里：颜色、语义色、字号、间距、圆角、尺寸。Style Dictionary 把它们编译成 CSS 变量、SCSS、JS 和 Tailwind 预设；Figma 里的变量、文字样式和组件集绑定同一组值。改一个令牌，四个地方一起变。">Every value lives in <b>W3C DTCG JSON under tokens/</b>: colour, semantic roles, type, spacing, radius, sizing. Style Dictionary compiles them into CSS variables, SCSS, JS and a Tailwind preset; Figma variables, text styles and component sets bind to the same values. Change one token and all four follow.</p>
+    <p data-zh="组件做成<b>纯 CSS 类</b>，不绑任何框架：React、Vue 或纯 HTML 都能直接用。需要行为的少数组件（下拉、弹层、进度、刷新、输入）附带一个很小的 JS 增强脚本。">Components ship as <b>plain CSS classes</b>, bound to no framework: React, Vue or bare HTML can use them as-is. The few that need behaviour (select, popup, loading, refresh, input) come with a small progressive-enhancement script.</p>
+  </div>
+</section>
+<div class="figs"><figure class="rv"><div class="code"><b>tokens/</b>  (W3C DTCG — the only place values are written)
+├─ color.json  semantic.json  typography.json  spacing.json  radius.json  size.json
+│
+└─▶ <u>style-dictionary</u>
+      ├─▶ dist/tokens.css        CSS custom properties
+      ├─▶ dist/tokens.scss       Sass
+      ├─▶ dist/tokens.js         JS
+      ├─▶ tailwind.preset.js     Tailwind
+      └─▶ <u>dist/design-system.css</u>   tokens + 11 components, one file
+
+Figma library  ◀── same values: Primitives + Semantic variables, 8 text styles,
+                   Button (36 variants) · Input (12) · Select (10) · Checkbox (12) · …</div><figcaption><b>FIG 03</b><span data-zh="单一来源。dist/ 和 Tailwind 预设永远不手改，只改令牌再构建。">One source of truth. dist/ and the Tailwind preset are never edited by hand, only tokens are, then rebuilt.</span></figcaption></figure></div>
+
+<section class="ch" data-crumb="03 live">
+  <div class="ch-n m rv"><b>03</b><span data-zh="实物">Live</span></div>
+  <div class="rv">
+    <h2 data-zh="下面不是截图，是真组件。">What follows isn’t a screenshot. It’s the components.</h2>
+    <p data-zh="这个框里加载的是设计系统发布出来的那份 design-system.css 和配套脚本，原样拷贝，没有改一行。点一点：下拉、开关、标签页、刷新按钮、底部弹层都能用。">This frame loads the published design-system.css and its scripts, copied as-is without changing a line. Try it: the select, switches, tabs, refresh button and bottom sheet all work.</p>
+  </div>
+</section>
+<div class="figs no-md"><figure class="rv"><div class="shot live"><iframe src="assets/rs/specimen.html" title="Live RS component specimen" loading="lazy"></iframe></div><figcaption><b>FIG 04</b><span data-zh="可交互。真实的 RS 组件，运行在你的浏览器里。">Interactive. The real RS components, running in your browser.</span></figcaption></figure></div>
+
+<section class="ch" data-crumb="04 agents">
+  <div class="ch-n m rv"><b>04</b><span data-zh="给 Agent">For agents</span></div>
+  <div class="rv">
+    <h2 data-zh="组件化，是为了让 Agent 直接调用。">Componentised so coding agents can call it directly.</h2>
+    <p data-zh="现在很多界面是 AI 编码 Agent 写的。如果设计系统只存在于 Figma 里，Agent 只能猜，猜出来的就是「一眼 AI」。所以我给它写了三个入口：<b>CLAUDE.md</b>、<b>Copilot 指令</b>和一个可调用的 <b>design-system 技能</b>，加上一份 396 行、人和机器都能读的 Design.md。">A lot of UI is now written by AI coding agents. If a design system lives only in Figma, the agent guesses, and guesses look generic. So I gave agents three front doors: <b>CLAUDE.md</b>, <b>Copilot instructions</b> and an invocable <b>design-system skill</b>, backed by a 396-line Design.md that people and machines can both read.</p>
+    <p data-zh="规则写得像 lint：不许硬编码颜色、间距和圆角；缺什么值先加令牌；按钮只能用现有的类；焦点环不许去掉。还有一个 <b>verify 技能</b>，教 Agent 在真实浏览器里搭测试页、用触摸手势把组件跑一遍，再交付。">The rules read like lint: no hard-coded colour, spacing or radius; a missing value becomes a token first; buttons use existing classes only; the focus ring stays. A separate <b>verify skill</b> teaches the agent to build a harness page and drive components in a real browser, touch gestures included, before handing anything over.</p>
+  </div>
+</section>
+<div class="figs duo">
+  <figure class="rv"><div class="code"><b>&gt; prompt</b>
+Add a “Claim daily reward” card to the wallet page.
+
+<b>&lt; agent loads</b> <u>.claude/skills/design-system/SKILL.md</u>
+  ✓ tokens are the single source of truth
+  ✓ primary = black, accent = purple.600 / purple.50
+  ✓ reuse .btn, .toast, .refresh — do not invent
+
+<b>&lt; output</b>
+&lt;section class="card" style="background: var(--bg-subtle)"&gt;
+  &lt;h3 class="text-subsection"&gt;Daily reward&lt;/h3&gt;
+  &lt;span class="balance"&gt;120 &lt;button class="refresh" data-refresh
+        aria-label="Refresh reward"&gt;…&lt;/button&gt;&lt;/span&gt;
+  &lt;button class="btn btn--solid btn--accent"&gt;Claim&lt;/button&gt;
+&lt;/section&gt;
+
+  ✗ no hex values   ✗ no new button style   ✓ focus ring kept</div><figcaption><b>FIG 05</b><span data-zh="一次典型调用（示意）：Agent 先加载技能，再只用已有的类和令牌拼出新界面。">A typical call (illustrative): the agent loads the skill first, then composes new UI from existing classes and tokens only.</span></figcaption></figure>
+  <figure class="rv"><div class="code"><b># CLAUDE.md — RS Design System</b>
+Read Design.md for the full spec before generating or
+changing any UI.
+
+<b>## Rules when writing UI</b>
+- <u>No hard-coded values.</u> Reference tokens
+  (var(--color-purple-600), the Tailwind preset, or tokens.js).
+- <u>Color roles:</u> primary Black #000000; secondary Purple —
+  fg #5F40A1, bg #F4F0FB. Prefer semantic tokens.
+- <u>Buttons:</u> .btn + .btn--solid | .btn--outline
+  (+ .btn--accent, .btn--sm / --lg, .btn--loading).
+- <u>Reuse components:</u> input, select, checkbox, switch, tabs,
+  toast, popup, loading, spinner, refresh — check
+  docs/components/ before building anything new.
+- <u>A11y:</u> keep the purple focus ring; real &lt;button&gt;/&lt;a&gt;;
+  WCAG AA pairings.</div><figcaption><b>FIG 06</b><span data-zh="CLAUDE.md 节选（原文）。Copilot 指令和技能文件写的是同一套规则。">Excerpt from CLAUDE.md, verbatim. The Copilot instructions and the skill carry the same rules.</span></figcaption></figure>
+</div>
+
+<section class="ch" data-crumb="05 docs">
+  <div class="ch-n m rv"><b>05</b><span data-zh="文档">Docs</span></div>
+  <div class="rv">
+    <h2 data-zh="每个组件一页：变体、状态、API、令牌、无障碍。">One page per component: variants, states, API, tokens, accessibility.</h2>
+    <p data-zh="文档站用 VitePress 搭，示例都是真组件渲染。每页的结构固定：能复制的代码、类名 API 表、组件消费了哪些令牌、键盘和读屏要求。Agent 要找用法时，读的也是这些页面。">The docs site runs on VitePress and every example renders the real component. Each page has the same structure: copyable code, a class API table, which tokens the component consumes, keyboard and screen-reader requirements. When an agent needs usage, these are the pages it reads.</p>
+  </div>
+</section>
+<div class="strip rv">
+  <figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/seed-ds-button.jpg" alt="Button docs page" loading="lazy"></div></div><figcaption><b>FIG 07</b><span data-zh="按钮：四种变体、三种尺寸、图标、加载、状态、API、令牌。">Button: four variants, three sizes, icons, loading, states, API, tokens.</span></figcaption></figure>
+  <figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/seed-ds-select.jpg" alt="Select docs page" loading="lazy"></div></div><figcaption><b>FIG 08</b><span data-zh="下拉：表单与筛选两型、面板行为、键盘与 ARIA、动效。">Select: form and filter types, panel behaviour, keyboard and ARIA, motion.</span></figcaption></figure>
+  <figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/seed-ds-colors.jpg" alt="Colours page" loading="lazy"></div></div><figcaption><b>FIG 09</b><span data-zh="颜色：品牌色、色阶、危险色、金币色，以及组件消费的语义令牌。">Colours: brand, ramps, danger, coin, and the semantic tokens components consume.</span></figcaption></figure>
+  <figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/seed-ds-typography.jpg" alt="Typography page" loading="lazy"></div></div><figcaption><b>FIG 10</b><span data-zh="字体：八级字号，映射到文本工具类和原生元素。">Typography: an eight-step scale mapped to text utilities and native elements.</span></figcaption></figure>
+  <figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/seed-ds-spinner.jpg" alt="Spinner docs page" loading="lazy"></div></div><figcaption><b>FIG 11</b><span data-zh="加载：用品牌四叶草做加载标志。">Spinner: the brand clover as the loading mark.</span></figcaption></figure>
+</div>
+
+<section class="ch" data-crumb="06 in use">
+  <div class="ch-n m rv"><b>06</b><span data-zh="落地">In use</span></div>
+  <div class="rv">
+    <h2 data-zh="开发者平台：同一套系统，换一种性格。">The developer platform: same system, different personality.</h2>
+    <p data-zh="Randseed 的游戏开发者平台把设计系统当作依赖包引入，导航、按钮、表单直接用系统组件；街机风的分隔条、视觉小说式的互动区，则是在系统之上长出来的品牌表达。系统管住一致性，留出表达空间。">Randseed’s game developer platform takes the design system as a package dependency: navigation, buttons and forms use system components directly, while arcade-style separators and a visual-novel interactive section grow on top as brand expression. The system holds consistency and leaves room to play.</p>
+  </div>
+</section>
+<div class="figs side">
+  <figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/seed-dev-full.jpg" alt="Developer platform landing page" loading="lazy"></div></div><figcaption><b>FIG 12</b><span data-zh="开发者平台落地页。页面滚动时截图同步滚动。">Developer platform landing. Scroll the page and the screenshot scrolls with you.</span></figcaption></figure>
+  <figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/seed-dev-mobile.jpg" alt="Developer platform on a phone" loading="lazy"></div></div><figcaption><b>FIG 13</b><span data-zh="同一页面在手机上。">The same page on a phone.</span></figcaption></figure>
+</div>
+
+<div class="demo rv"><p data-zh="想看 Figma 组件库和代码仓库？可以安排一次演示。">Want to see the Figma library and the repository? I can walk you through them.</p><a class="cta solid" href="index.html#contact"><span data-zh="预约演示">Book a walkthrough</span> →</a></div>
+<a class="next" href="atlas.html"><span class="m" data-zh="回到第一个项目 — 01">Back to the first case — 01</span><b>Atlas →</b></a>
+</main>
+<script src="site.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prism — design system and landing page · tripletree</title>
+<meta name="description" content="Case study: brand, design system, landing page and agent-readable entry files for an AI decision platform in textiles.">
+<meta name="theme-color" content="#0A0A0B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%230A0A0B'/%3E%3Crect x='5' y='3' width='6' height='10' fill='%23D6FF3D'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+<noscript><style>.rv{opacity:1;transform:none}</style></noscript>
+</head>
+<body data-page="prism">
+<main>
+<header class="c-hero" data-crumb="overview">
+  <p class="m"><a href="index.html#work">index</a> / <span data-zh="项目 04 — 设计系统 + 落地页">case 04 — design system + landing page</span></p>
+  <h1 style="view-transition-name:t-prism">Prism</h1>
+  <p class="c-lede" data-zh="为一个纺织行业的 AI 决策平台，从零做出品牌、设计系统和落地页，并把它们写成 Agent 也能用的形式。">Brand, design system and landing page for an AI decision platform in textiles, written so that agents can use them too.</p>
+  <dl class="c-meta">
+    <div><dt class="m" data-zh="客户">Client</dt><dd><span class="red">███████</span> <span data-zh="（保密，截图中的品牌名已替换）">(under NDA; brand name replaced in screenshots)</span></dd></div>
+    <div><dt class="m" data-zh="角色">Role</dt><dd data-zh="品牌、设计系统、落地页，一人完成">Brand, design system and landing page, end to end</dd></div>
+    <div><dt class="m" data-zh="交付">Delivered</dt><dd>CSS tokens · DESIGN.md · SKILL.md · AGENTS.md · Vue 3 package</dd></div>
+    <div><dt class="m" data-zh="技术栈">Stack</dt><dd>Vue 3.5 · TypeScript · Vite · Tailwind CSS 4</dd></div>
+  </dl>
+</header>
+
+<div class="figs"><figure class="rv"><div class="shot"><div class="ba" style="--ar:1440/900"><img src="assets/prism-hero-dark.jpg" alt="Landing page hero, dark theme"><img src="assets/prism-hero-light.jpg" alt="Landing page hero, light theme"><i></i><span>DARK</span><span>LIGHT</span></div></div><figcaption><b>FIG 01</b><span data-zh="拖动切换主题。同一份令牌，暗色用于品牌落地页，亮色对齐产品控制台。">Drag to switch theme. One token set: dark for the brand landing page, light to match the product console.</span></figcaption></figure></div>
+
+<div class="nums rv">
+  <div><b>41</b><span class="m" data-zh="个 Vue 基础组件">Vue primitives</span></div>
+  <div><b>2</b><span class="m" data-zh="套主题，一份令牌">themes from one token set</span></div>
+  <div><b>3</b><span class="m" data-zh="类读者：设计师、工程师、Agent">readers: designers, engineers, agents</span></div>
+  <div><b>1</b><span class="m" data-zh="个工作强调色（每个主题）">working accent per theme</span></div>
+</div>
+
+<section class="ch" data-crumb="01 brand">
+  <div class="ch-n m rv"><b>01</b><span data-zh="品牌">Brand</span></div>
+  <div class="rv">
+    <h2 data-zh="时尚的气质，数据的纪律。">Fashion’s mood, data’s discipline.</h2>
+    <p data-zh="产品要向面料商和品牌方证明「时尚判断可以被验证」。视觉上我把两件事拧在一起：<b>曜石黑的底、冷米白的字、发丝般的描边</b>给出高级感；<b>数字本身就是画面</b>：机会指数 78/100、+18%、TOP 5。">The product has to convince mills and brands that fashion judgment can be verified. Visually I twisted two things together: <b>obsidian surfaces, cool bone text and hairline borders</b> for the premium feel, and <b>numbers as the imagery</b>: opportunity index 78/100, +18%, TOP 5.</p>
+    <p data-zh="规则写得很死：每个主题只有一个工作强调色；香槟金和胭脂红只做数据系列；永不使用 emoji。">The rules are strict: one working accent per theme; champagne and rouge only as data series; no emoji, ever.</p>
+  </div>
+</section>
+<div class="figs duo">
+  <figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/prism-full-dark.jpg" alt="Full landing page, dark" loading="lazy"></div></div><figcaption><b>FIG 02</b><span data-zh="暗色完整落地页。页面滚动时，截图同步滚动。">The full landing page in dark. Scroll the page and the screenshot scrolls with you.</span></figcaption></figure>
+  <figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/prism-full-light.jpg" alt="Full landing page, light" loading="lazy"></div></div><figcaption><b>FIG 03</b><span data-zh="同一页面的亮色版：布局不变，只换令牌。">The same page in light: no layout change, only tokens.</span></figcaption></figure>
+</div>
+
+<section class="ch" data-crumb="02 system">
+  <div class="ch-n m rv"><b>02</b><span data-zh="系统">System</span></div>
+  <div class="rv">
+    <h2 data-zh="文档站就是用系统自己搭的。">The docs site is built with the system itself.</h2>
+    <p data-zh="组件页和规范页不是设计稿截图，而是用同一个 Vue 包渲染出来的真实页面：按钮、标签、数据卡、图表、表单、筛选器、分页、反馈。<b>文档和产品不会不同步，因为它们是同一份代码。</b>">The component and guideline pages aren’t screenshots of mock-ups. They are real pages rendered with the same Vue package: buttons, tags, stat cards, charts, forms, filters, pagination, feedback. <b>Docs and product can’t drift apart, because they are the same code.</b></p>
+  </div>
+</section>
+<div class="figs duo">
+  <figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/prism-components.jpg" alt="Components page" loading="lazy"></div></div><figcaption><b>FIG 04</b><span data-zh="组件页：35 个应用级组件。">Components: 35 application-level components on one page.</span></figcaption></figure>
+  <figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/prism-guidelines.jpg" alt="Guidelines page" loading="lazy"></div></div><figcaption><b>FIG 05</b><span data-zh="规范页：颜色、字体、表面、动效、图标、文案语气。">Guidelines: colour, type, surfaces, motion, iconography, voice.</span></figcaption></figure>
+</div>
+
+<section class="ch" data-crumb="03 agents">
+  <div class="ch-n m rv"><b>03</b><span data-zh="Agent">Agents</span></div>
+  <div class="rv">
+    <h2 data-zh="设计系统的第三类读者。">The design system’s third reader.</h2>
+    <p data-zh="设计师看 Figma，工程师看代码，Agent 看什么？我给它写了专门的入口：一份开放格式的 DESIGN.md、一个可调用的 SKILL.md、一份「动手前先读」的 AGENTS.md。让 Agent 画一张新页面时，它不需要猜。">Designers read Figma. Engineers read code. What does an agent read? I wrote it a front door of its own: a DESIGN.md in an open format, an invocable SKILL.md, and an AGENTS.md that says what to read before touching anything. Ask an agent for a new page and it doesn’t have to guess.</p>
+  </div>
+</section>
+<div class="figs duo">
+  <figure class="rv"><div class="code"><b>design-system/</b>
+├─ <u>readme.md</u>      <span data-zh="给人：品牌、语气、视觉基础">for people: brand, voice, visual foundations</span>
+├─ <u>DESIGN.md</u>      <span data-zh="给工具：开放格式的令牌与组件">for tools: tokens &amp; components, open format</span>
+├─ <u>SKILL.md</u>       <span data-zh="给 Agent：可调用的设计技能">for agents: an invocable design skill</span>
+├─ <u>AGENTS.md</u>      <span data-zh="给 Agent：动手前先读什么">for agents: what to read before touching anything</span>
+├─ tokens/        colors · typography · effects
+└─ templates/vue-package/
+   ├─ src/components/ui/   <span data-zh="41 个基础组件 + 每个组件的 .prompt.md">41 primitives + a .prompt.md recipe for each</span>
+   └─ src/pages/           <span data-zh="落地页 · 组件页 · 规范页">landing · components · guidelines</span></div><figcaption><b>FIG 06</b><span data-zh="仓库结构。每一类读者有自己的入口文件。">Repository layout. Each kind of reader gets its own entry file.</span></figcaption></figure>
+  <figure class="rv"><div class="shot"><img src="assets/prism-products-light.jpg" alt="Product section, light theme" loading="lazy"></div><figcaption><b>FIG 07</b><span data-zh="亮色下的产品能力区。看板、对话、报告这些画面都是组件，不是图片。">Product section in light. The dashboard, chat and report visuals are components, not images.</span></figcaption></figure>
+</div>
+
+<div class="demo rv"><p data-zh="想看代码仓库和组件包？可以安排一次演示。">Want to see the repository and the package? I can walk you through them.</p><a class="cta solid" href="index.html#contact"><span data-zh="预约演示">Book a walkthrough</span> →</a></div>
+<a class="next" href="randseed.html"><span class="m" data-zh="下一个项目 — 05">Next case — 05</span><b>Randseed →</b></a>
+</main>
+<script src="site.js"></script>
+</body>
+</html>
