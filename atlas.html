@@ -18,7 +18,7 @@
 <header class="c-hero" data-crumb="overview">
   <p class="m"><a href="index.html#work">index</a> / <span data-zh="项目 01 — 产品设计">case 01 — product design</span></p>
   <h1 style="view-transition-name:t-atlas">Atlas</h1>
-  <p class="c-lede" data-zh="把一个运行了十几年的学术会议平台，重建成可以按模块售卖的 SaaS 产品。">Rebuilding a decade-old academic conference platform into a SaaS product you can buy one module at a time.</p>
+  <p class="c-lede" data-zh="把运行十几年的会议平台，重建为按模块售卖的 SaaS。">Rebuilt a decade-old conference platform into modular SaaS.</p>
   <dl class="c-meta">
     <div><dt class="m" data-zh="客户">Client</dt><dd><span class="red">████████</span> <span data-zh="（保密）">(under NDA)</span></dd></div>
     <div><dt class="m" data-zh="角色">Role</dt><dd data-zh="产品经理，负责重建与重新上线">Product manager for the rebuild and relaunch</dd></div>
@@ -27,7 +27,7 @@
   </dl>
 </header>
 
-<div class="figs"><figure class="rv"><div class="shot"><img src="assets/atlas-start.jpg" alt="Event setup screen offering to reuse existing settings or start fresh"></div><figcaption><b>FIG 01</b><span data-zh="新平台的会议设置入口：复用上一届的配置，或从头开始。组织者最常见的两种起点，被做成了第一屏。">Event setup in the new platform: reuse last edition’s settings or start fresh. The two ways organisers actually begin became the first screen.</span></figcaption></figure></div>
+<div class="figs"><figure class="rv"><div class="shot"><img src="assets/atlas-start.jpg" alt="Event setup screen offering to reuse existing settings or start fresh"></div><figcaption><b>FIG 01</b><span data-zh="会议设置：复用上届，或从头开始。">Event setup: reuse last edition or start fresh.</span></figcaption></figure></div>
 
 <div class="nums rv">
   <div><b>100k+</b><span class="m" data-zh="平台注册用户">registered users on the platform</span></div>
@@ -39,67 +39,54 @@
 <section class="ch" data-crumb="01 problem">
   <div class="ch-n m rv"><b>01</b><span data-zh="问题">Problem</span></div>
   <div class="rv">
-    <h2 data-zh="一个内部工具，要变成别人愿意付钱的产品。">An internal tool had to become something strangers would pay for.</h2>
-    <p data-zh="老平台是为内部会议团队长出来的：所有功能堆在一个后台里，菜单按角色罗列，新用户进来不知道从哪开始。公司的方向是把它开放给外部会议组织者，做成 B2B 业务。">The old platform grew up around one internal conference team. Every feature lived in a single back office, menus listed every role at once, and a newcomer had no obvious place to begin. The company wanted to open it to external organisers as a B2B business.</p>
-    <p data-zh="<b>我的工作是回答三个问题：</b>外部组织者到底要什么；产品怎么拆才卖得动；以及如何在不中断现有会议的前提下换掉整个系统。"><b>My job was to answer three questions:</b> what external organisers actually need, how the product must be cut to be sellable, and how to swap the whole system without interrupting events already running on it.</p>
+    <h2 data-zh="内部工具 → 可售卖的产品。">Internal tool → sellable product.</h2>
+    <p data-zh="一个后台塞下所有角色，没有对外售卖的路径。要回答三件事：组织者要什么、产品怎么拆、怎么不停机切换。">One back office held every role, with no path to B2B. Three questions: what organisers need, how to package it, how to switch without downtime.</p>
   </div>
 </section>
-<div class="figs"><figure class="rv"><div class="shot"><div class="ba" style="--ar:1600/700"><img src="assets/atlas-old.jpg" alt="Old dashboard" loading="lazy"><img src="assets/atlas-events.jpg" alt="New events list" loading="lazy"><i></i><span data-zh="旧版">BEFORE</span><span data-zh="新版">AFTER</span></div></div><figcaption><b>FIG 02</b><span data-zh="拖动对比。旧版：一个页面列出全部十种角色入口。新版：菜单随角色自动收敛，只显示当前身份用得到的工具。">Drag to compare. Before: one page listing ten role entry points. After: the menu narrows to the tools your current role can use.</span></figcaption></figure></div>
+<div class="figs"><figure class="rv"><div class="shot"><div class="ba" style="--ar:1600/700"><img src="assets/atlas-old.jpg" alt="Old dashboard" loading="lazy"><img src="assets/atlas-events.jpg" alt="New events list" loading="lazy"><i></i><span data-zh="旧版">BEFORE</span><span data-zh="新版">AFTER</span></div></div><figcaption><b>FIG 02</b><span data-zh="拖动对比。旧：一页十个角色入口。新：菜单随角色收敛。">Drag. Before: ten role entries on one page. After: the menu narrows to your role.</span></figcaption></figure></div>
 
 <section class="ch" data-crumb="02 research">
   <div class="ch-n m rv"><b>02</b><span data-zh="研究">Research</span></div>
   <div class="rv">
-    <h2 data-zh="先听，再画。">Listen first, draw second.</h2>
-    <p data-zh="我访谈了外部组织者，和设计师一起把老平台的完整旅程图走了一遍，并持续收集内部会议团队的需求。外部客户的画像很清晰：<b>已经是平台用户的个人学者，预算不高</b>。">I interviewed external organisers, walked the full journey of the old platform with our designer, and kept a running intake of requests from the internal conference team. The external profile was clear: <b>individual scholars already on the platform, working with small budgets</b>.</p>
-    <ul>
-      <li data-n="R1" data-zh="<b>分会场不该一开始就定死。</b>他们希望先收稿，再根据稿件组织 session。"><b>Sessions shouldn’t be fixed up front.</b> Organisers want to collect submissions first and shape sessions around what arrives.</li>
-      <li data-n="R2" data-zh="<b>投稿流程太长。</b>作者经常找不到提交按钮，最后由管理员代投。"><b>Submitting takes too long.</b> Authors lose the submit button and admins end up submitting on their behalf.</li>
-      <li data-n="R3" data-zh="<b>定价让人焦虑。</b>票价定高了没人来，定低了亏本，他们需要可预期的成本。"><b>Pricing makes them anxious.</b> Set tickets too high and nobody comes, too low and the event loses money. They need a cost they can predict.</li>
-      <li data-n="R4" data-zh="<b>不想在平台之间倒数据。</b>希望直接接入视频会议工具和后续的出版流程。"><b>No more copying data between tools.</b> They want video conferencing and the publishing workflow connected.</li>
-    </ul>
+    <h2 data-zh="研究：四个发现。">Research: four findings.</h2>
+    <p data-zh="用户访谈 + 全旅程图 + 内部需求池。">Interviews, a full journey map, a running intake from the internal team.</p>
+    <ul><li data-n="R1" data-zh="分会场不该预先定死">Sessions shouldn’t be fixed up front</li><li data-n="R2" data-zh="投稿太长，常由管理员代投">Submitting is too long; admins submit for authors</li><li data-n="R3" data-zh="定价有风险，组织者要可预期的成本">Pricing feels risky; organisers want predictable cost</li><li data-n="R4" data-zh="不想在工具之间倒数据">No more copying data between tools</li></ul>
   </div>
 </section>
 
 <section class="ch" data-crumb="03 architecture">
   <div class="ch-n m rv"><b>03</b><span data-zh="架构">Architecture</span></div>
   <div class="rv">
-    <h2 data-zh="从单体到模块：没买的功能，根本不出现。">From monolith to modules: what you didn’t buy never appears.</h2>
-    <p data-zh="我把产品拆成三个可以单独购买的模块：<b>建站、投稿评审、注册票务</b>。没有购买的模块不会出现在菜单里，所以一个只想收摘要的小型研讨会，看到的就是一个很小的产品。">I cut the product into three modules that can be bought on their own: <b>website builder, submissions and review, registration and ticketing</b>. A module you haven’t bought doesn’t show in the menu, so a small workshop that only collects abstracts sees a small product.</p>
-    <p data-zh="后台改成按角色呈现：管理员、主席、编辑、审稿人、作者各自看到自己的工具。会议设置按「基础、分会场、人员、投稿、评审、注册」一条线排开，每一步都能回头改。">The back office became role-based: admins, chairs, editors, reviewers and authors each see their own tools. Event settings run in one line (basics, sessions, people, submissions, review, registration) and every step can be revisited.</p>
+    <h2 data-zh="单体 → 三个模块。">Monolith → three modules.</h2>
+    <p data-zh="建站、投稿评审、注册票务可单独购买，没买的不出现；后台按角色呈现。">Website, submissions &amp; review, registration: sold separately, and unbought modules disappear. The back office became role-based.</p>
   </div>
 </section>
 <div class="figs duo">
-  <figure class="rv"><div class="shot"><img src="assets/atlas-subset.jpg" alt="Submission and review settings" loading="lazy"></div><figcaption><b>FIG 03</b><span data-zh="投稿与评审设置。「只收摘要 / 只收全文」做成一个选择，覆盖不需要先交摘要的会议。">Submission and review settings. “Abstracts only” versus “full files only” is one choice, covering events that skip the abstract round.</span></figcaption></figure>
-  <figure class="rv"><div class="shot"><img src="assets/atlas-regform.jpg" alt="Registration form builder" loading="lazy"></div><figcaption><b>FIG 04</b><span data-zh="注册表单配置。字段、必填、类型都由组织者自己开关，不再需要找我们改代码。">Registration form builder. Fields, required flags and types are switches the organiser owns. No more tickets asking us to change code.</span></figcaption></figure>
+  <figure class="rv"><div class="shot"><img src="assets/atlas-subset.jpg" alt="Submission and review settings" loading="lazy"></div><figcaption><b>FIG 03</b><span data-zh="只收摘要 / 只收全文：一个选项。">Abstracts-only or full files: one choice.</span></figcaption></figure>
+  <figure class="rv"><div class="shot"><img src="assets/atlas-regform.jpg" alt="Registration form builder" loading="lazy"></div><figcaption><b>FIG 04</b><span data-zh="注册表单由组织者自己配置。">Organisers own the registration form.</span></figcaption></figure>
 </div>
 
 <section class="ch" data-crumb="04 flows">
   <div class="ch-n m rv"><b>04</b><span data-zh="流程">Flows</span></div>
   <div class="rv">
-    <h2 data-zh="把最常走的路修短。">Shorten the roads people walk most.</h2>
-    <p data-zh="每条核心流程我都先写 PRD，过产品评审，再进设计和开发。几处改动最能说明思路："><b>Every core flow went PRD → product review → design → build.</b> A few changes show the thinking:</p>
-    <ul>
-      <li data-n="F1" data-zh="<b>投稿从 5 步变 2 步。</b>作者信息和稿件各占一步，其他都挪到提交之后。"><b>Submission went from five steps to two.</b> Author details, then the contribution. Everything else moved to after submit.</li>
-      <li data-n="F2" data-zh="<b>办会申请变成一页表单。</b>只问决定能否立项的信息，先降低门槛，再谈细节。"><b>Proposing an event became one page.</b> It asks only what decides whether the event can go ahead. Lower the barrier first, discuss details later.</li>
-      <li data-n="F3" data-zh="<b>票务分步配置，催款自动化。</b>到期前自动提醒，多币种开票和收据自动生成。"><b>Ticketing is configured step by step, and chasing payment is automatic.</b> Reminders fire before the due date; multi-currency invoices and receipts generate themselves.</li>
-      <li data-n="F4" data-zh="<b>会议官网改为多页结构。</b>横向导航替代一个无限长的首页。"><b>Event websites became multi-page.</b> Horizontal navigation replaced one endless home page.</li>
-    </ul>
+    <h2 data-zh="缩短核心流程。">Shorter core flows.</h2>
+    <p data-zh="每条流程：PRD → 评审 → 设计 → 开发。">Every flow: PRD → review → design → build.</p>
+    <ul><li data-n="F1" data-zh="投稿：5 步 → 2 步">Submission: 5 steps → 2</li><li data-n="F2" data-zh="办会申请：一页表单">Event proposal: one page</li><li data-n="F3" data-zh="自动催款，多币种开票">Automatic payment reminders, multi-currency invoices</li><li data-n="F4" data-zh="会议官网：多页 + 横向导航">Event sites: multi-page, horizontal nav</li></ul>
   </div>
 </section>
 <div class="strip rv">
-  <figure><div class="shot"><img src="assets/atlas-submit.jpg" alt="New submission form" loading="lazy"></div><figcaption><b>FIG 05</b><span data-zh="新的投稿表单，两步中的第二步。">The new submission form, step two of two.</span></figcaption></figure>
-  <figure><div class="shot"><img src="assets/atlas-proposal.jpg" alt="Single page event proposal form" loading="lazy"></div><figcaption><b>FIG 06</b><span data-zh="一页式办会申请。">Event proposal on a single page.</span></figcaption></figure>
-  <figure><div class="shot"><img src="assets/atlas-pay.jpg" alt="Payment and automatic reminders settings" loading="lazy"></div><figcaption><b>FIG 07</b><span data-zh="付款设置：自动确认注册、三段式催款提醒。">Payment settings: automatic confirmation and three scheduled reminders.</span></figcaption></figure>
-  <figure><div class="shot"><img src="assets/atlas-site.jpg" alt="Event website made with the website builder" loading="lazy"></div><figcaption><b>FIG 08</b><span data-zh="建站模块生成的会议官网（示例数据）。">An event website produced by the builder (sample data).</span></figcaption></figure>
+  <figure><div class="shot"><img src="assets/atlas-submit.jpg" alt="New submission form" loading="lazy"></div><figcaption><b>FIG 05</b><span data-zh="投稿，两步中的第二步。">Submission, step 2 of 2.</span></figcaption></figure>
+  <figure><div class="shot"><img src="assets/atlas-proposal.jpg" alt="Single page event proposal form" loading="lazy"></div><figcaption><b>FIG 06</b><span data-zh="一页式办会申请。">One-page event proposal.</span></figcaption></figure>
+  <figure><div class="shot"><img src="assets/atlas-pay.jpg" alt="Payment and automatic reminders settings" loading="lazy"></div><figcaption><b>FIG 07</b><span data-zh="自动确认 + 三段催款提醒。">Auto-confirm and three scheduled reminders.</span></figcaption></figure>
+  <figure><div class="shot"><img src="assets/atlas-site.jpg" alt="Event website made with the website builder" loading="lazy"></div><figcaption><b>FIG 08</b><span data-zh="建站模块产出（示例数据）。">Builder output (sample data).</span></figcaption></figure>
 </div>
-<div class="figs" style="margin-top:28px"><figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/atlas-ticket.jpg" alt="Ticket selection and order summary" loading="lazy"></div></div><figcaption><b>FIG 09</b><span data-zh="参会者购票：选票、附加项、支付三步，右侧订单随选随算。">Attendee checkout: tickets, add-ons, payment. The order summary recalculates as you choose.</span></figcaption></figure></div>
+<div class="figs" style="margin-top:28px"><figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/atlas-ticket.jpg" alt="Ticket selection and order summary" loading="lazy"></div></div><figcaption><b>FIG 09</b><span data-zh="购票：选票、附加项、支付。">Checkout: tickets, add-ons, payment.</span></figcaption></figure></div>
 
 <section class="ch" data-crumb="05 launch">
   <div class="ch-n m rv"><b>05</b><span data-zh="上线">Launch</span></div>
   <div class="rv">
-    <h2 data-zh="卖法和做法一起设计。">Design how it’s sold alongside how it’s built.</h2>
-    <p data-zh="竞品都在按年或按量收托管费。我把<b>「会议内容永久可访问，不另收费」</b>写成定位的第一句话，价格是第二句：中型会议的入门价比头部竞品低约八成，三个模块各自定价，可组合折扣。">Competitors charge for hosting by the year or by the item. I made <b>“your conference record stays accessible, permanently, at no extra cost”</b> the first sentence of the positioning. Price is the second: entry cost for a mid-sized event sits roughly 80% below the market leader, with each module priced on its own and bundles discounted.</p>
-    <p data-zh="上线本身是一次组织协调。我按影响力和关注度梳理了十二类干系人，为每一类准备不同的信息和时间点；路线图里每个页面都走同样的七个阶段，所有人随时看得到卡在哪。">The launch itself was an alignment exercise. I mapped twelve stakeholder groups by power and interest and gave each its own message and timing. Every page on the roadmap moves through the same seven stages, so anyone can see where things are stuck.</p>
+    <h2 data-zh="定位、定价、切换。">Positioning, pricing, cutover.</h2>
+    <ul><li data-n="P1" data-zh="首推永久免费托管，价格其次">Lead with permanent free hosting; price second</li><li data-n="P2" data-zh="中型会议入门价比头部竞品低约 80%">~80% below the market leader for mid-size events</li><li data-n="P3" data-zh="12 类干系人，一张周更路线图">12 stakeholder groups, one weekly roadmap</li></ul>
   </div>
 </section>
 <div class="figs"><figure class="rv"><div class="shot board">
@@ -114,9 +101,9 @@
   <div class="r"><span data-zh="稿件处理">Submission handling</span><span class="track"><i class="f"></i><i class="f"></i><i></i><i></i><i></i><i></i><i></i></span><span class="st">PRD</span></div>
   <div class="r"><span data-zh="注册订单">Registration orders</span><span class="track"><i class="f"></i><i class="f"></i><i></i><i></i><i></i><i></i><i></i></span><span class="st">PRD</span></div>
   <div class="r"><span data-zh="邮件与通知">Mailing &amp; notifications</span><span class="track"><i class="f"></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="st">queued</span></div>
-</div><figcaption><b>FIG 10</b><span data-zh="重建中期的一张路线图快照。每个页面走同样的七个阶段，这张表每周更新，也是管理层汇报的唯一材料。">A roadmap snapshot from mid-rebuild. Every page passes the same seven stages. The table was updated weekly and was the only artefact leadership needed.</span></figcaption></figure></div>
+</div><figcaption><b>FIG 10</b><span data-zh="路线图：每个页面七个阶段，每周更新。">Roadmap: every page, seven stages, updated weekly.</span></figcaption></figure></div>
 
-<div class="demo rv"><p data-zh="想看完整流程和决策文档？可以安排一次演示。">Want the full flows and the decision documents? I can walk you through them.</p><a class="cta solid" href="index.html#contact"><span data-zh="预约演示">Book a walkthrough</span> →</a></div>
+<div class="demo rv"><p data-zh="完整流程与决策文档，可预约演示。">Full flows and decision docs on request.</p><a class="cta solid" href="index.html#contact"><span data-zh="预约演示">Book a walkthrough</span> →</a></div>
 
 <a class="next" href="forge.html"><span class="m" data-zh="下一个项目 — 02">Next case — 02</span><b>Forge →</b></a>
 </main>

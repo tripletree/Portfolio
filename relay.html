@@ -17,7 +17,7 @@
 <header class="c-hero" data-crumb="overview">
   <p class="m"><a href="index.html#work">index</a> / <span data-zh="项目 03 — AI 开发流水线">case 03 — AI delivery pipeline</span></p>
   <h1 style="view-transition-name:t-relay">Relay</h1>
-  <p class="c-lede" data-zh="一个让卡车司机预订停车位的 Web 应用。管理端和司机端，全部由 Agent 流水线开发，技能是我写的。">A web app where truck drivers book parking. Operator console and driver app, developed entirely through an agent pipeline running on skills I wrote.</p>
+  <p class="c-lede" data-zh="卡车停车预订应用（管理端 + 司机端），全部由 Agent 流水线开发，技能由我编写。">A truck-parking booking app, operator console plus driver app, built entirely by an agent pipeline on skills I wrote.</p>
   <dl class="c-meta">
     <div><dt class="m" data-zh="客户">Client</dt><dd><span class="red">███████</span> <span data-zh="（保密）">(under NDA)</span></dd></div>
     <div><dt class="m" data-zh="角色">Role</dt><dd data-zh="产品设计；编写 Agent 技能；驱动流水线">Product design; author of the agent skills; I drive the pipeline</dd></div>
@@ -44,7 +44,7 @@
     <main><div class="kp"><div><small>Occupancy</small><b>82%</b></div><div><small>Bookings today</small><b>64</b></div><div><small>Arrivals pending</small><b>11</b></div><div><small>Revenue · 7d</small><b>$18.4k</b></div></div>
       <div class="tb"><div><span>Driver</span><span>Yard</span><span>Dates</span><span>Plan</span><span>Status</span></div><div><span>M. Alvarez</span><span>Yard 12</span><span>20–23 Dec</span><span>Daily</span><em>Paid</em></div><div><span>J. Okafor</span><span>Yard 12</span><span>20 Dec → 19 Jan</span><span>Monthly</span><em>Paid</em></div><div><span>R. Singh</span><span>Yard 07</span><span>21–22 Dec</span><span>Daily</span><em class="w">Draft</em></div><div><span>T. Nguyen</span><span>Yard 03</span><span>22–29 Dec</span><span>Weekly</span><em>Paid</em></div></div>
       <div class="cap"><div><small style="color:#6B7280">Yard capacity</small><div class="barrow"><span>Yard 12</span><i><b style="width:92%"></b></i><span>92%</span></div><div class="barrow"><span>Yard 07</span><i><b style="width:71%"></b></i><span>71%</span></div><div class="barrow"><span>Yard 03</span><i><b style="width:58%"></b></i><span>58%</span></div></div><div class="cam">CAM 04 · GATE IN</div></div></main></div></div>
-</div><figcaption><b>FIG 01</b><span data-zh="司机端三步预订与管理端控制台。出于保密，界面为按真实产品结构重绘，数据为示意。">Driver booking in three steps and the operator console. Redrawn from the real product structure for confidentiality; data is illustrative.</span></figcaption></figure></div>
+</div><figcaption><b>FIG 01</b><span data-zh="司机三步预订与管理端，为保密重绘。">Driver booking and operator console, redrawn for confidentiality.</span></figcaption></figure></div>
 
 <div class="nums rv">
   <div><b>10</b><span class="m" data-zh="个 Agent 技能">agent skills</span></div>
@@ -56,29 +56,28 @@
 <section class="ch" data-crumb="01 product">
   <div class="ch-n m rv"><b>01</b><span data-zh="产品">Product</span></div>
   <div class="rv">
-    <h2 data-zh="两个端，一件事：让卡车有地方停。">Two surfaces, one job: give a truck somewhere to park.</h2>
-    <p data-zh="<b>司机端</b>跑在手机浏览器里：选停车场和日期，填车牌，用银行卡、银行扣款、Apple Pay 或 Google Pay 付款，拿到进场码。<b>管理端</b>给停车场运营方：订单、场地容量、定价、客户，以及读车牌的 AI 摄像头和车辆进出记录。"><b>The driver app</b> runs in a phone browser: choose a yard and dates, enter a plate, pay by card, bank debit, Apple Pay or Google Pay, receive a gate code. <b>The operator console</b> serves the yard operator: bookings, capacity, pricing, customers, plus AI cameras that read plates and the vehicle records they produce.</p>
-    <p data-zh="这个项目没有传统意义上的「开发排期」。每一个功能和缺陷都是一张工单，每一张工单都走同一条流水线。">This project has no development schedule in the traditional sense. Every feature and defect is a ticket, and every ticket travels the same pipeline.</p>
+    <h2 data-zh="两个端，一件事。">Two surfaces, one job.</h2>
+    <p data-zh="司机在手机上预订、支付、拿进场码；运营方管订单、容量、定价和车牌识别摄像头。每个功能都是一张工单，走同一条流水线。">Drivers book, pay and get a gate code on mobile. Operators run bookings, capacity, pricing and plate-reading cameras. Every feature is a ticket through one pipeline.</p>
   </div>
 </section>
 
 <section class="ch" data-crumb="02 pipeline">
   <div class="ch-n m rv"><b>02</b><span data-zh="流水线">Pipeline</span></div>
   <div class="rv">
-    <h2 data-zh="一张工单的一生。">The life of one ticket.</h2>
-    <p data-zh="人只出现在两头：开头写清楚要什么，结尾看证据签收。中间的规划、派发、实现、门禁、评审都由 Agent 按技能执行。下面是一张真实类型的缺陷工单走完全程的回放。">People appear at both ends only: stating what is wanted at the start, reading evidence and signing off at the end. Planning, dispatch, implementation, gates and review in between are done by agents following skills. Below is a replay of a real kind of defect ticket going all the way through.</p>
+    <h2 data-zh="人只在两头。">Humans at both ends only.</h2>
+    <p data-zh="我写验收标准、看证据签收；规划、派发、实现、门禁、评审交给 Agent。">I write the criteria and sign off on evidence. Agents plan, dispatch, build, gate and review.</p>
   </div>
 </section>
-<div class="figs no-md"><figure class="rv"><button class="cta run-btn" id="runBtn">▶ <span data-zh="重放">replay</span></button><div class="pipe"><ol class="rail" id="rail"></ol><div class="term" id="term"></div></div><figcaption><b>FIG 02</b><span data-zh="可交互。左侧是阶段和负责它的技能，右侧是该阶段的输出。">Interactive. Stages and the skill responsible on the left, each stage’s output on the right.</span></figcaption></figure></div>
+<div class="figs no-md"><figure class="rv"><button class="cta run-btn" id="runBtn">▶ <span data-zh="重放">replay</span></button><div class="pipe"><ol class="rail" id="rail"></ol><div class="term" id="term"></div></div><figcaption><b>FIG 02</b><span data-zh="可交互：一张工单的回放。">Interactive replay of one ticket.</span></figcaption></figure></div>
 
 <section class="ch" data-crumb="03 skills">
   <div class="ch-n m rv"><b>03</b><span data-zh="技能">Skills</span></div>
   <div class="rv">
-    <h2 data-zh="我写的不是代码，是 Agent 的工作方式。">I don’t write the code. I write how agents work.</h2>
-    <p data-zh="技能是一份给 Agent 读的说明书：什么时候加载、负责什么、不许做什么、怎样算完成。Agent 根据任务描述自动匹配并加载。十个技能分四组：<b>任务编排、通用规范、知识沉淀、工具集成</b>。">A skill is a manual written for an agent: when to load it, what it owns, what it must not do, and what counts as done. Agents match and load skills from the task description. The ten skills fall into four groups: <b>task orchestration, shared rules, knowledge, tooling</b>.</p>
+    <h2 data-zh="我写的是 Agent 的工作方式。">I write how agents work.</h2>
+    <p data-zh="10 个技能、2,446 行，分四组：编排、规范、知识、工具。">10 skills, 2,446 lines, four groups: orchestration, rules, knowledge, tooling.</p>
   </div>
 </section>
-<div class="figs"><figure class="rv"><div class="skills"><div class="skill"><b>task-creator</b><p data-zh="把模糊需求收口成三字段工单：任务说明、职责范围、验收标准。然后立刻停下。">Turns a fuzzy request into a ticket with three fields: requirements, scope, acceptance criteria. Then stops.</p><span>SKILL.md · 226 lines</span></div><div class="skill"><b>task-planner</b><p data-zh="把主任务拆成子任务，串好阻塞关系，按文件域判断并行还是串行。">Splits a ticket into subtasks, chains blockers, and decides parallel or serial by file domain.</p><span>SKILL.md · 373 lines</span></div><div class="skill"><b>task-dispatcher</b><p data-zh="按标签把工单路由到常驻的 Agent 会话，并回收卡死的任务。">Routes labelled tickets to persistent agent sessions and recycles the ones that stall.</p><span>SKILL.md · 544 lines</span></div><div class="skill"><b>task-worker</b><p data-zh="执行单个子任务：一票一工作区。读验收标准、干活、提交判定。">Executes one subtask: one ticket, one worktree. Reads the criteria, does the work, files a verdict.</p><span>SKILL.md · 207 lines</span></div><div class="skill"><b>house-rules</b><p data-zh="所有 Agent 启动必读的家规，外加九项审计，发现违规就纠正。">Conventions every agent loads at start, plus a nine-point audit that corrects violations.</p><span>SKILL.md · 228 lines</span></div><div class="skill"><b>wiki-guide</b><p data-zh="知识怎么沉淀：文档如何分类、放在哪、按什么模板写。">Where knowledge goes: how to classify a document, where it lives, which template it follows.</p><span>SKILL.md · 113 lines</span></div><div class="skill"><b>pr-review-hook</b><p data-zh="接收仓库 webhook，验签，触发首次评审和新提交后的重审。">Receives repository webhooks, verifies signatures, triggers first review and re-review on new commits.</p><span>SKILL.md · 116 lines</span></div><div class="skill"><b>status-reporter</b><p data-zh="把开发台账投影成客户看得懂的状态表，每次整块写入。">Projects the dev ledger into a status sheet the customer can read, one batch write at a time.</p><span>SKILL.md · 123 lines</span></div><div class="skill"><b>platform-cli</b><p data-zh="平台 API 的命令行入口，设备码登录，命令集由 API 目录生成。">Command-line access to the platform API with device-flow login, generated from the API catalogue.</p><span>SKILL.md · 342 lines</span></div><div class="skill"><b>function-dev</b><p data-zh="用声明式 YAML 规格驱动的 serverless 函数开发流程。">Serverless function workflow driven by declarative YAML specs.</p><span>SKILL.md · 174 lines</span></div></div><figcaption><b>FIG 03</b><span data-zh="技能清单。行数是每个 SKILL.md 的真实长度。">The skill set. Line counts are the real length of each SKILL.md.</span></figcaption></figure></div>
+<div class="figs"><figure class="rv"><div class="skills"><div class="skill"><b>task-creator</b><p data-zh="把模糊需求收口成三字段工单：任务说明、职责范围、验收标准。然后立刻停下。">Turns a fuzzy request into a ticket with three fields: requirements, scope, acceptance criteria. Then stops.</p><span>SKILL.md · 226 lines</span></div><div class="skill"><b>task-planner</b><p data-zh="把主任务拆成子任务，串好阻塞关系，按文件域判断并行还是串行。">Splits a ticket into subtasks, chains blockers, and decides parallel or serial by file domain.</p><span>SKILL.md · 373 lines</span></div><div class="skill"><b>task-dispatcher</b><p data-zh="按标签把工单路由到常驻的 Agent 会话，并回收卡死的任务。">Routes labelled tickets to persistent agent sessions and recycles the ones that stall.</p><span>SKILL.md · 544 lines</span></div><div class="skill"><b>task-worker</b><p data-zh="执行单个子任务：一票一工作区。读验收标准、干活、提交判定。">Executes one subtask: one ticket, one worktree. Reads the criteria, does the work, files a verdict.</p><span>SKILL.md · 207 lines</span></div><div class="skill"><b>house-rules</b><p data-zh="所有 Agent 启动必读的家规，外加九项审计，发现违规就纠正。">Conventions every agent loads at start, plus a nine-point audit that corrects violations.</p><span>SKILL.md · 228 lines</span></div><div class="skill"><b>wiki-guide</b><p data-zh="知识怎么沉淀：文档如何分类、放在哪、按什么模板写。">Where knowledge goes: how to classify a document, where it lives, which template it follows.</p><span>SKILL.md · 113 lines</span></div><div class="skill"><b>pr-review-hook</b><p data-zh="接收仓库 webhook，验签，触发首次评审和新提交后的重审。">Receives repository webhooks, verifies signatures, triggers first review and re-review on new commits.</p><span>SKILL.md · 116 lines</span></div><div class="skill"><b>status-reporter</b><p data-zh="把开发台账投影成客户看得懂的状态表，每次整块写入。">Projects the dev ledger into a status sheet the customer can read, one batch write at a time.</p><span>SKILL.md · 123 lines</span></div><div class="skill"><b>platform-cli</b><p data-zh="平台 API 的命令行入口，设备码登录，命令集由 API 目录生成。">Command-line access to the platform API with device-flow login, generated from the API catalogue.</p><span>SKILL.md · 342 lines</span></div><div class="skill"><b>function-dev</b><p data-zh="用声明式 YAML 规格驱动的 serverless 函数开发流程。">Serverless function workflow driven by declarative YAML specs.</p><span>SKILL.md · 174 lines</span></div></div><figcaption><b>FIG 03</b><span data-zh="10 个技能，行数为真实值。">Ten skills; real line counts.</span></figcaption></figure></div>
 <div class="figs duo" style="margin-top:28px">
   <figure class="rv"><div class="code"><b># /task-creator</b>
 &gt; Turn a fuzzy request into a main task that can be ticketed. Then stop.
@@ -93,7 +92,7 @@
 ✗ do not decide labels         → the pipeline adds [plan]
 ✗ do not plan, phase or assign
 
-After creating the main task, <u>stop immediately</u>.</div><figcaption><b>FIG 04</b><span data-zh="节选（英译）：工单契约。三个字段，主任务和子任务通用。">Excerpt (translated): the ticket contract. Three fields, shared by main tasks and subtasks.</span></figcaption></figure>
+After creating the main task, <u>stop immediately</u>.</div><figcaption><b>FIG 04</b><span data-zh="工单契约（译文节选）。">Ticket contract (translated excerpt).</span></figcaption></figure>
   <figure class="rv"><div class="code"><b># /task-worker</b>
 &gt; Loads when the pipeline dispatches a labelled subtask.
 &gt; Reads the ticket → executes the criteria → files a verdict.
@@ -107,19 +106,14 @@ After creating the main task, <u>stop immediately</u>.</div><figcaption><b>FIG 0
 
 <b>## Verdict</b>
 PASS | FAIL  + evidence
-escalate when the ticket itself is wrong</div><figcaption><b>FIG 05</b><span data-zh="节选（英译）：执行技能的硬规则。它们大多来自某次真实事故的复盘。">Excerpt (translated): hard rules of the execution skill. Most of them trace back to a real incident review.</span></figcaption></figure>
+escalate when the ticket itself is wrong</div><figcaption><b>FIG 05</b><span data-zh="执行硬规则，均来自事故复盘（译文）。">Worker hard rules, each from an incident (translated).</span></figcaption></figure>
 </div>
 
 <section class="ch" data-crumb="04 evidence">
   <div class="ch-n m rv"><b>04</b><span data-zh="证据">Evidence</span></div>
   <div class="rv">
-    <h2 data-zh="我看证据，不看 diff。">I read evidence, not diffs.</h2>
-    <p data-zh="Agent 说「修好了」不算数。每个改动必须过静态门禁（lint 零警告、类型检查、密钥扫描、死代码检查），过按行为命名的端到端测试，并附上真实浏览器里的前后对比和原始测量数据。">An agent saying “fixed” counts for nothing. Every change must pass static gates (lint with zero warnings, type check, secret scan, dead-code check), pass end-to-end tests named after behaviour, and attach a before/after from a real browser with the raw measurements.</p>
-    <ul>
-      <li data-n="G1" data-zh="<b>测试按行为命名。</b>工单号只出现在追溯表里，测试读起来就是需求。"><b>Tests are named after behaviour.</b> Ticket numbers live only in a traceability table, so the test suite reads as the requirements.</li>
-      <li data-n="G2" data-zh="<b>本地和 CI 同一判据。</b>警告即阻断，杜绝「本地过、CI 红」。"><b>Local and CI share one verdict.</b> A warning blocks, which ends “passes locally, fails in CI”.</li>
-      <li data-n="G3" data-zh="<b>预算是门禁的一部分。</b>包体积和性能分数超标，PR 不能合。"><b>Budgets are gates.</b> Exceed the bundle size or performance budget and the pull request cannot merge.</li>
-    </ul>
+    <h2 data-zh="看证据，不看 diff。">Evidence, not diffs.</h2>
+    <ul><li data-n="G1" data-zh="lint 零警告、类型、密钥、死代码">Zero-warning lint, types, secrets, dead code</li><li data-n="G2" data-zh="141 个按行为命名的 E2E 用例">141 behaviour-named E2E specs</li><li data-n="G3" data-zh="真实浏览器前后对比 + 原始数据">Real-browser before/after plus raw data</li><li data-n="G4" data-zh="超出预算不能合并">Over budget means no merge</li></ul>
   </div>
 </section>
 <div class="figs"><figure class="rv"><div class="code"><b>T-4937 · “Change date” dialog on a 375 px phone</b>            dialog inner width = 343 px
@@ -129,18 +123,17 @@ after   ████████████████████████
 
 viewports measured   375 × 812 · 390 × 844 · 1280 × 900
 artefacts            6 screenshots · shots-before.json · shots-after.json
-method               real layout engine, real dialog container, same harness for both runs</div><figcaption><b>FIG 06</b><span data-zh="一份证据的样子：同一套测量方法跑两遍，唯一的差别就是这次改动。">What a piece of evidence looks like: one measurement method run twice, the only difference being the change under review.</span></figcaption></figure></div>
+method               real layout engine, real dialog container, same harness for both runs</div><figcaption><b>FIG 06</b><span data-zh="同一方法跑两遍，唯一差别是改动。">One method, two runs, one difference.</span></figcaption></figure></div>
 
 <section class="ch" data-crumb="05 my part">
   <div class="ch-n m rv"><b>05</b><span data-zh="我的部分">My part</span></div>
   <div class="rv">
-    <h2 data-zh="流水线里的那个人。">The human in the pipeline.</h2>
-    <p data-zh="我做三件事。<b>第一，定义产品</b>：流程、界面和每张工单的验收标准。<b>第二，写技能</b>：把一次次复盘固化成 Agent 下次会遵守的规则。<b>第三，签收</b>：读证据，决定这张工单是否真的完成。">I do three things. <b>First, define the product</b>: flows, screens and the acceptance criteria on every ticket. <b>Second, write the skills</b>: turn each incident review into a rule agents will follow next time. <b>Third, sign off</b>: read the evidence and decide whether the ticket is actually done.</p>
-    <p data-zh="这套方法可以搬到别的团队：技能、工单契约、门禁和证据规范是一个可以交付的包。">The method transfers to other teams: the skills, ticket contract, gates and evidence rules form a package that can be delivered.</p>
+    <h2 data-zh="我的部分：定义、固化、签收。">My part: define, encode, sign off.</h2>
+    <p data-zh="定义产品与验收标准；把每次复盘固化成技能规则；看证据签收。整套方法可迁移到其他团队。">Define the product and its criteria; turn every incident review into a skill rule; read the evidence. The package transfers to other teams.</p>
   </div>
 </section>
 
-<div class="demo rv"><p data-zh="想看技能原文和一张工单的完整记录？可以安排一次演示。">Want to see the skills in full and one ticket’s complete record? I can walk you through them.</p><a class="cta solid" href="index.html#contact"><span data-zh="预约演示">Book a walkthrough</span> →</a></div>
+<div class="demo rv"><p data-zh="技能原文与一张工单的完整记录，可预约演示。">Full skills and one ticket’s record on request.</p><a class="cta solid" href="index.html#contact"><span data-zh="预约演示">Book a walkthrough</span> →</a></div>
 <a class="next" href="prism.html"><span class="m" data-zh="下一个项目 — 04">Next case — 04</span><b>Prism →</b></a>
 </main>
 <script src="site.js"></script>

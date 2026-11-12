@@ -17,7 +17,7 @@
 <header class="c-hero" data-crumb="overview">
   <p class="m"><a href="index.html#work">index</a> / <span data-zh="项目 02 — 设计系统">case 02 — design system</span></p>
   <h1 style="view-transition-name:t-forge">Forge</h1>
-  <p class="c-lede" data-zh="一套设计系统，撑起从线索到回款的整个企业运营后台：15 个模块，4 种角色首页。">One design system carrying an entire lead-to-cash operations console: fifteen modules, four role-based homes.</p>
+  <p class="c-lede" data-zh="一套设计系统，撑起从线索到回款的运营后台：15 个模块，4 种角色首页。">One design system behind a lead-to-cash console: 15 modules, 4 role homes.</p>
   <dl class="c-meta">
     <div><dt class="m" data-zh="客户">Client</dt><dd><span class="red">██████</span> <span data-zh="（保密）">(under NDA)</span></dd></div>
     <div><dt class="m" data-zh="角色">Role</dt><dd data-zh="产品设计，设计系统负责人">Product design, design system owner</dd></div>
@@ -27,8 +27,8 @@
 </header>
 
 <div class="figs side">
-  <figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/forge-sales.jpg" alt="Sales home: KPIs, funnel, top opportunities"></div></div><figcaption><b>FIG 01</b><span data-zh="销售首页。15 张指标卡、五段漏斗和重点商机，全部由同一套卡片、数值和表格组件拼出来。">Sales home. Fifteen KPI cards, a five-stage funnel and the top opportunities, all assembled from the same card, stat and table components.</span></figcaption></figure>
-  <figure class="rv"><div class="shot"><img src="assets/forge-sales-side.jpg" alt="Sales home side column" loading="lazy"></div><figcaption><b>FIG 02</b><span data-zh="侧栏：今日跟进、回款提醒、团队排行。">The side column: today’s follow-ups, payment reminders, team ranking.</span></figcaption></figure>
+  <figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/forge-sales.jpg" alt="Sales home: KPIs, funnel, top opportunities"></div></div><figcaption><b>FIG 01</b><span data-zh="销售首页：15 项指标、漏斗、重点商机，全部共用组件。">Sales home: 15 KPIs, funnel, top deals, all shared components.</span></figcaption></figure>
+  <figure class="rv"><div class="shot"><img src="assets/forge-sales-side.jpg" alt="Sales home side column" loading="lazy"></div><figcaption><b>FIG 02</b><span data-zh="跟进、回款、排行。">Follow-ups, payments, ranking.</span></figcaption></figure>
 </div>
 
 <div class="nums rv">
@@ -41,61 +41,58 @@
 <section class="ch" data-crumb="01 system">
   <div class="ch-n m rv"><b>01</b><span data-zh="系统">System</span></div>
   <div class="rv">
-    <h2 data-zh="先有系统，再有页面。">The system came before the screens.</h2>
-    <p data-zh="这是一个数据密度很高的后台：报价、成本、工时、风险都要在一屏里看清。我先在 Figma 里把基础定下来：<b>颜色、字号、间距、圆角全部做成变量</b>，再往上搭 60 多个组件规范画板，每个都写明状态、尺寸和用法。">This is a dense back office: quotes, costs, hours and risks all need to read on one screen. I fixed the foundations in Figma first, with <b>colour, type, spacing and radius all defined as variables</b>, then built more than sixty component spec frames on top, each documenting states, sizes and usage.</p>
-    <p data-zh="组件命名和代码保持一致，设计稿里的每个图层在工程里都能找到同名组件。交接时不需要解释，只需要对名字。">Component names match the code. Every layer in a design file has a same-named component in the codebase, so hand-off is a matter of matching names instead of explaining intent.</p>
+    <h2 data-zh="先系统，后页面。">System first, screens second.</h2>
+    <p data-zh="颜色、字号、间距、圆角全部变量化；60+ 组件规范；命名与代码一致。">Colour, type, spacing and radius as variables; 60+ spec frames; component names match the code.</p>
   </div>
 </section>
-<div class="figs"><figure class="rv"><div class="shot bleed"><img src="assets/forge-lib.jpg" alt="Component library overview in Figma" loading="lazy"></div><figcaption><b>FIG 03</b><span data-zh="组件库全景：输入、导航、数据展示、反馈、基础五组，每个组件一块画板。">The library at a glance: five groups (inputs, navigation, data display, feedback, foundations), one frame per component.</span></figcaption></figure></div>
+<div class="figs"><figure class="rv"><div class="shot bleed"><img src="assets/forge-lib.jpg" alt="Component library overview in Figma" loading="lazy"></div><figcaption><b>FIG 03</b><span data-zh="组件库：五组，每个组件一块画板。">Library: five groups, one frame per component.</span></figcaption></figure></div>
 
 <section class="ch" data-crumb="02 roles">
   <div class="ch-n m rv"><b>02</b><span data-zh="角色">Roles</span></div>
   <div class="rv">
-    <h2 data-zh="换一个人登录，不需要重画。">A different person logs in. Nothing gets redrawn.</h2>
-    <p data-zh="销售、项目经理、工程师、管理员四种角色各有一个首页。它们回答的问题完全不同：销售看<b>这个季度还差多少</b>，项目经理看<b>哪个项目需要我决策</b>。但四个首页用的是同一批组件，只是数据和排列不同。">Sales, project managers, engineers and admins each get their own home. They answer different questions. Sales asks <b>how far am I from this quarter’s number</b>; a PM asks <b>which project needs a decision from me</b>. All four are built from the same components with different data and arrangement.</p>
-    <p data-zh="这是我判断一套设计系统是否成立的标准：新增一个角色视图，应该是配置工作，而不是设计工作。">That is my test for whether a design system is real: adding a role view should be configuration work, not design work.</p>
+    <h2 data-zh="新增角色是配置，不是设计。">A new role is configuration, not design.</h2>
+    <p data-zh="销售、项目经理、工程师、管理员：四个首页，同一批组件。">Sales, PM, engineer, admin: four homes built from the same components.</p>
   </div>
 </section>
 <div class="figs side">
-  <figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/forge-pm.jpg" alt="Project manager home" loading="lazy"></div></div><figcaption><b>FIG 04</b><span data-zh="项目经理首页：项目健康度、本周里程碑、待决策事项。">Project manager home: portfolio health, milestones this week, decisions waiting.</span></figcaption></figure>
-  <figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/forge-pm-side.jpg" alt="PM side column" loading="lazy"></div></div><figcaption><b>FIG 05</b><span data-zh="同样的侧栏模式，内容换成待决策、团队负载、风险登记。">Same side-column pattern, different content: pending decisions, team load, risk register.</span></figcaption></figure>
+  <figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/forge-pm.jpg" alt="Project manager home" loading="lazy"></div></div><figcaption><b>FIG 04</b><span data-zh="项目经理首页：健康度、里程碑、待决策。">PM home: health, milestones, decisions.</span></figcaption></figure>
+  <figure class="rv"><div class="shot scrollshot"><div class="win"><img src="assets/forge-pm-side.jpg" alt="PM side column" loading="lazy"></div></div><figcaption><b>FIG 05</b><span data-zh="同一侧栏模式，换成项目内容。">Same side pattern, PM content.</span></figcaption></figure>
 </div>
 
 <section class="ch" data-crumb="03 flows">
   <div class="ch-n m rv"><b>03</b><span data-zh="流程">Flows</span></div>
   <div class="rv">
-    <h2 data-zh="一条对象链，而不是一堆页面。">An object chain, not a pile of pages.</h2>
-    <p data-zh="线索 → 客户 → 商机 → 报价 → 合同 → 项目 → 任务 → 工时 → 成本 → 回款。我先把业务对象和它们之间的关系定下来，页面只是这条链在不同角色眼中的切面。">Lead → customer → opportunity → quote → contract → project → task → timesheet → cost → payment. I settled the business objects and their relationships first. Pages are views of that chain for each role.</p>
-    <p data-zh="以定制商机为例：销售提交定制申请，工程给出<b>可行性方案</b>，成本做<b>概算</b>，最后<b>复评打分</b>决定接不接。四个页面共用同一套步骤条、表单分组和评分卡。">Take a custom opportunity. Sales files the request, engineering answers with a <b>feasibility plan</b>, finance produces a <b>cost estimate</b>, and a <b>scored review</b> decides whether to take the deal. Four pages share one stepper, one form-section pattern and one score card.</p>
+    <h2 data-zh="先定对象，页面随之。">Objects first, pages follow.</h2>
+    <p data-zh="线索 → 客户 → 商机 → 报价 → 合同 → 项目 → 任务 → 工时 → 成本 → 回款。定制商机走可行性 → 概算 → 复评，共用一套模式。">Lead → customer → opportunity → quote → contract → project → task → hours → cost → payment. Custom deals run feasibility → estimate → scored review on one shared pattern set.</p>
   </div>
 </section>
 <div class="strip rv">
-  <figure class="rv"><div class="shot"><img src="assets/forge-opp-list.jpg" alt="Opportunity list" loading="lazy"></div><figcaption><b>FIG 06</b><span data-zh="商机列表，带筛选与分组。">Opportunity list with saved filters and grouping.</span></figcaption></figure>
-  <figure class="rv"><div class="shot"><img src="assets/forge-opp-detail.jpg" alt="Opportunity detail" loading="lazy"></div><figcaption><b>FIG 07</b><span data-zh="商机详情与阶段进度。">Opportunity detail with stage tracker.</span></figcaption></figure>
-  <figure class="rv"><div class="shot"><img src="assets/forge-opp-feas.jpg" alt="Feasibility plan" loading="lazy"></div><figcaption><b>FIG 08</b><span data-zh="定制申请：可行性方案。">Custom request: feasibility plan.</span></figcaption></figure>
-  <figure class="rv"><div class="shot"><img src="assets/forge-opp-costest.jpg" alt="Cost estimate" loading="lazy"></div><figcaption><b>FIG 09</b><span data-zh="定制申请：成本概算。">Custom request: cost estimate.</span></figcaption></figure>
-  <figure class="rv"><div class="shot"><img src="assets/forge-opp-score.jpg" alt="Scored review" loading="lazy"></div><figcaption><b>FIG 10</b><span data-zh="定制申请：复评打分。">Custom request: scored review.</span></figcaption></figure>
+  <figure class="rv"><div class="shot"><img src="assets/forge-opp-list.jpg" alt="Opportunity list" loading="lazy"></div><figcaption><b>FIG 06</b><span data-zh="列表：筛选与分组。">List with filters and grouping.</span></figcaption></figure>
+  <figure class="rv"><div class="shot"><img src="assets/forge-opp-detail.jpg" alt="Opportunity detail" loading="lazy"></div><figcaption><b>FIG 07</b><span data-zh="详情与阶段进度。">Detail with stage tracker.</span></figcaption></figure>
+  <figure class="rv"><div class="shot"><img src="assets/forge-opp-feas.jpg" alt="Feasibility plan" loading="lazy"></div><figcaption><b>FIG 08</b><span data-zh="可行性方案。">Feasibility.</span></figcaption></figure>
+  <figure class="rv"><div class="shot"><img src="assets/forge-opp-costest.jpg" alt="Cost estimate" loading="lazy"></div><figcaption><b>FIG 09</b><span data-zh="成本概算。">Cost estimate.</span></figcaption></figure>
+  <figure class="rv"><div class="shot"><img src="assets/forge-opp-score.jpg" alt="Scored review" loading="lazy"></div><figcaption><b>FIG 10</b><span data-zh="复评打分。">Scored review.</span></figcaption></figure>
 </div>
 
 <section class="ch" data-crumb="04 cost engine">
   <div class="ch-n m rv"><b>04</b><span data-zh="成本引擎">Cost engine</span></div>
   <div class="rv">
-    <h2 data-zh="最难的一块：让钱的流向看得懂。">The hardest part: making money legible.</h2>
-    <p data-zh="成本中心把一个项目从<b>概算、预算、核算到决算</b>的四个数字放在同一条时间线上，偏差超过阈值就亮灯。我为它设计了一组专用模式：状态流转条、四算对比条、偏差预警卡。它们都从基础组件派生，没有新增一个颜色。">The cost centre puts a project’s four numbers (<b>estimate, budget, actuals, final account</b>) on one timeline and raises a flag when variance crosses a threshold. I designed a small set of dedicated patterns for it: a status-flow bar, a four-figure comparison bar, a variance alert card. All derive from base components. No new colour was added.</p>
+    <h2 data-zh="让钱看得懂。">Making money legible.</h2>
+    <p data-zh="概算、预算、核算、决算同一时间线，偏差自动预警。新增模式，零新增颜色。">Estimate, budget, actuals and final account on one timeline; variance flags itself. New patterns, zero new colours.</p>
   </div>
 </section>
 <div class="figs duo">
-  <figure class="rv"><div class="shot"><img src="assets/forge-cost-a.jpg" alt="Cost centre dashboard" loading="lazy"></div><figcaption><b>FIG 11</b><span data-zh="成本中心：各项目的预算、实际与偏差。">Cost centre: budget, actuals and variance across projects.</span></figcaption></figure>
-  <figure class="rv"><div class="shot"><img src="assets/forge-cost-d.jpg" alt="Four-figure reconciliation centre" loading="lazy"></div><figcaption><b>FIG 12</b><span data-zh="四算中心：概算准确率随时间的变化。">Reconciliation centre: accuracy of estimates over time.</span></figcaption></figure>
+  <figure class="rv"><div class="shot"><img src="assets/forge-cost-a.jpg" alt="Cost centre dashboard" loading="lazy"></div><figcaption><b>FIG 11</b><span data-zh="各项目预算与实际。">Budget vs actuals across projects.</span></figcaption></figure>
+  <figure class="rv"><div class="shot"><img src="assets/forge-cost-d.jpg" alt="Four-figure reconciliation centre" loading="lazy"></div><figcaption><b>FIG 12</b><span data-zh="概算准确率趋势。">Estimate accuracy over time.</span></figcaption></figure>
 </div>
 <div class="strip rv" style="margin-top:22px">
-  <figure class="rv"><div class="shot"><img src="assets/forge-cost-b.jpg" alt="Cost execution detail" loading="lazy"></div><figcaption><b>FIG 13</b><span data-zh="单个项目的成本执行：状态流转、消耗曲线、偏差。">Cost execution for one project: status flow, burn curve, variance.</span></figcaption></figure>
-  <figure class="rv"><div class="shot"><img src="assets/forge-cost-e.jpg" alt="Reconciliation detail" loading="lazy"></div><figcaption><b>FIG 14</b><span data-zh="单个项目的四算对账。">Four-figure reconciliation for one project.</span></figcaption></figure>
-  <figure class="rv"><div class="shot"><img src="assets/forge-cost-c.jpg" alt="Hours centre" loading="lazy"></div><figcaption><b>FIG 15</b><span data-zh="工时中心：按人、按项目的负载。">Hours centre: load by person and by project.</span></figcaption></figure>
-  <figure class="rv"><div class="shot"><img src="assets/forge-cost-f.jpg" alt="Variance analysis" loading="lazy"></div><figcaption><b>FIG 16</b><span data-zh="跨产品线的偏差分析。">Variance analysis across product lines.</span></figcaption></figure>
+  <figure class="rv"><div class="shot"><img src="assets/forge-cost-b.jpg" alt="Cost execution detail" loading="lazy"></div><figcaption><b>FIG 13</b><span data-zh="单个项目：流转、消耗、偏差。">One project: flow, burn, variance.</span></figcaption></figure>
+  <figure class="rv"><div class="shot"><img src="assets/forge-cost-e.jpg" alt="Reconciliation detail" loading="lazy"></div><figcaption><b>FIG 14</b><span data-zh="四算对账。">Four-figure reconciliation.</span></figcaption></figure>
+  <figure class="rv"><div class="shot"><img src="assets/forge-cost-c.jpg" alt="Hours centre" loading="lazy"></div><figcaption><b>FIG 15</b><span data-zh="按人、按项目的工时。">Hours by person and project.</span></figcaption></figure>
+  <figure class="rv"><div class="shot"><img src="assets/forge-cost-f.jpg" alt="Variance analysis" loading="lazy"></div><figcaption><b>FIG 16</b><span data-zh="按产品线的偏差。">Variance by product line.</span></figcaption></figure>
 </div>
 
-<div class="demo rv"><p data-zh="想翻一遍 Figma 源文件？可以安排一次演示。">Want to go through the Figma source file? I can walk you through it.</p><a class="cta solid" href="index.html#contact"><span data-zh="预约演示">Book a walkthrough</span> →</a></div>
+<div class="demo rv"><p data-zh="Figma 源文件，可预约演示。">Figma source on request.</p><a class="cta solid" href="index.html#contact"><span data-zh="预约演示">Book a walkthrough</span> →</a></div>
 <a class="next" href="relay.html"><span class="m" data-zh="下一个项目 — 03">Next case — 03</span><b>Relay →</b></a>
 </main>
 <script src="site.js"></script>
